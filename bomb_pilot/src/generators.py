@@ -4,10 +4,31 @@ from __future__ import annotations
 import gc
 import hashlib
 import logging
+from functools import wraps
 
 import numpy as np
 
 log = logging.getLogger("generators")
+
+
+def _patch_metax_sdpa(torch) -> None:
+    """MetaX torch 2.4 的 SDPA 不接受 enable_gqa；仅省略关闭 GQA 时的参数。"""
+    version = str(torch.__version__)
+    if not (version.startswith("2.4.") and "metax" in version):
+        return
+    native_sdpa = torch.nn.functional.scaled_dot_product_attention
+    if getattr(native_sdpa, "_bomb_metax_sdpa_compat", False):
+        return
+
+    @wraps(native_sdpa)
+    def compatible_sdpa(*args, **kwargs):
+        if kwargs.get("enable_gqa") is False:
+            kwargs.pop("enable_gqa")
+        return native_sdpa(*args, **kwargs)
+
+    compatible_sdpa._bomb_metax_sdpa_compat = True
+    torch.nn.functional.scaled_dot_product_attention = compatible_sdpa
+    log.info("MetaX torch 2.4 SDPA 兼容：省略 enable_gqa=False，保留原注意力计算")
 
 
 class MockGenerator:
@@ -39,6 +60,8 @@ class WanGenerator:
 
     def __init__(self, gcfg: dict, prompts: list[str]):
         import torch
+
+        _patch_metax_sdpa(torch)
         from diffusers import AutoencoderKLWan, WanPipeline
 
         self.torch = torch
