@@ -1,0 +1,537 @@
+{
+  "summary": {
+    "suspense_metric": "rollout",
+    "H1": {
+      "mean_diff": 0.11261637042799978,
+      "dz": 0.5969739629672802,
+      "p_one_sided": 0.05859375,
+      "n": 9,
+      "frac_positive": 0.6666666666666666
+    },
+    "H2": {
+      "mean_diff": 0.5448181380689168,
+      "dz": 1.6460211483297185,
+      "p_one_sided": 0.001953125,
+      "n": 9,
+      "frac_positive": 1.0
+    },
+    "H4": {
+      "mean_diff": 1.6872946449150499,
+      "dz": 2.0381252018864626,
+      "p_one_sided": 0.001953125,
+      "n": 9
+    },
+    "per_story": {
+      "cafe_bomb": {
+        "H1_mean": 0.28436036943122656,
+        "H2_mean": 0.9407109528232728,
+        "H4_mean": 2.631275531905677,
+        "n_seeds": 3
+      },
+      "poisoned_wine": {
+        "H1_mean": -0.11778708562787117,
+        "H2_mean": 0.19492633218826927,
+        "H4_mean": 1.0991785682416644,
+        "n_seeds": 3
+      },
+      "thin_ice": {
+        "H1_mean": 0.171275827480644,
+        "H2_mean": 0.4988171291952081,
+        "H4_mean": 1.3314298345978084,
+        "n_seeds": 3
+      }
+    }
+  },
+  "pairs": [
+    {
+      "story": "cafe_bomb",
+      "seed": 0,
+      "H1_suspense_diff": 0.30312175306268124,
+      "H2_surprise_diff": 1.0257662094734687,
+      "H4_rating_diff": 2.6792117045924897,
+      "label_mass_min": 0.9996089935302734
+    },
+    {
+      "story": "cafe_bomb",
+      "seed": 1,
+      "H1_suspense_diff": 0.26588382821971757,
+      "H2_surprise_diff": 0.8738683140443746,
+      "H4_rating_diff": 2.7939403648200027,
+      "label_mass_min": 0.999584436416626
+    },
+    {
+      "story": "cafe_bomb",
+      "seed": 2,
+      "H1_suspense_diff": 0.2840755270112808,
+      "H2_surprise_diff": 0.9224983349519748,
+      "H4_rating_diff": 2.4206745263045377,
+      "label_mass_min": 0.9995212554931641
+    },
+    {
+      "story": "poisoned_wine",
+      "seed": 0,
+      "H1_suspense_diff": -0.2324215271686516,
+      "H2_surprise_diff": 0.25022408464006685,
+      "H4_rating_diff": 1.968086944185103,
+      "label_mass_min": 0.9995023012161255
+    },
+    {
+      "story": "poisoned_wine",
+      "seed": 1,
+      "H1_suspense_diff": -0.09947549269785114,
+      "H2_surprise_diff": 0.11770329138763247,
+      "H4_rating_diff": 0.4071054374653613,
+      "label_mass_min": 0.9992305040359497
+    },
+    {
+      "story": "poisoned_wine",
+      "seed": 2,
+      "H1_suspense_diff": -0.021464237017110727,
+      "H2_surprise_diff": 0.21685162053710855,
+      "H4_rating_diff": 0.9223433230745286,
+      "label_mass_min": 0.9993922710418701
+    },
+    {
+      "story": "thin_ice",
+      "seed": 0,
+      "H1_suspense_diff": 0.12542330096821533,
+      "H2_surprise_diff": 0.5847515098198541,
+      "H4_rating_diff": 1.51094395418977,
+      "label_mass_min": 0.9994316697120667
+    },
+    {
+      "story": "thin_ice",
+      "seed": 1,
+      "H1_suspense_diff": 0.197871833389317,
+      "H2_surprise_diff": 0.45836445828906824,
+      "H4_rating_diff": 1.2933965873517081,
+      "label_mass_min": 0.9991044998168945
+    },
+    {
+      "story": "thin_ice",
+      "seed": 2,
+      "H1_suspense_diff": 0.19053234808439967,
+      "H2_surprise_diff": 0.4533354194767019,
+      "H4_rating_diff": 1.1899489622519468,
+      "label_mass_min": 0.9993939399719238
+    }
+  ],
+  "probes": [
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 0,
+      "fact": "bomb_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 0.0018076178555119782
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 0,
+      "fact": "explosion_visible",
+      "p_yes_expected": 0.9980582892894745,
+      "p_yes_other": 1.1699331473380425e-06
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 1,
+      "fact": "bomb_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 0.0004753514969427404
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 1,
+      "fact": "explosion_visible",
+      "p_yes_expected": 0.9982993006706238,
+      "p_yes_other": 1.3108601166322842e-06
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 2,
+      "fact": "bomb_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 0.0013715917269045974
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 2,
+      "fact": "explosion_visible",
+      "p_yes_expected": 0.998586893081665,
+      "p_yes_other": 1.6759971757096537e-06
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 0,
+      "fact": "bomb_visible",
+      "p_yes_expected": 0.9932558834552765,
+      "p_yes_other": 0.0021657597768836466
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 0,
+      "fact": "explosion_visible",
+      "p_yes_expected": 0.9980582892894745,
+      "p_yes_other": 0.0004665041670570247
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 1,
+      "fact": "bomb_visible",
+      "p_yes_expected": 0.9980732202529907,
+      "p_yes_other": 0.0005691526681431469
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 1,
+      "fact": "explosion_visible",
+      "p_yes_expected": 0.9982993006706238,
+      "p_yes_other": 4.7262355990085327e-05
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 2,
+      "fact": "bomb_visible",
+      "p_yes_expected": 0.9881139695644379,
+      "p_yes_other": 0.0015645131632041399
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 2,
+      "fact": "explosion_visible",
+      "p_yes_expected": 0.998586893081665,
+      "p_yes_other": 0.00011207927425402887
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 0,
+      "fact": "poison_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 5.599953879216931e-05
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 0,
+      "fact": "collapse_visible",
+      "p_yes_expected": 0.9143961668014526,
+      "p_yes_other": 0.0020382897719400717
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 1,
+      "fact": "poison_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 0.00013743470034910388
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 1,
+      "fact": "collapse_visible",
+      "p_yes_expected": 0.9199530780315399,
+      "p_yes_other": 0.0006998896258210152
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 2,
+      "fact": "poison_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 5.471425018773365e-05
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 2,
+      "fact": "collapse_visible",
+      "p_yes_expected": 0.9907179176807404,
+      "p_yes_other": 0.0025058987313968826
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 0,
+      "fact": "poison_visible",
+      "p_yes_expected": 0.977022647857666,
+      "p_yes_other": 5.9293517972491826e-05
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 0,
+      "fact": "collapse_visible",
+      "p_yes_expected": 0.9143961668014526,
+      "p_yes_other": 0.0020530983492790256
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 1,
+      "fact": "poison_visible",
+      "p_yes_expected": 0.6912067532539368,
+      "p_yes_other": 0.00015719999820476004
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 1,
+      "fact": "collapse_visible",
+      "p_yes_expected": 0.9199530780315399,
+      "p_yes_other": 0.0006990572198446899
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 2,
+      "fact": "poison_visible",
+      "p_yes_expected": 0.63398078083992,
+      "p_yes_other": 4.953039110091595e-05
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 2,
+      "fact": "collapse_visible",
+      "p_yes_expected": 0.9907179176807404,
+      "p_yes_other": 0.002504582064057104
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 0,
+      "fact": "crack_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 0.0021862545346872744
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 0,
+      "fact": "fall_visible",
+      "p_yes_expected": 0.9981789588928223,
+      "p_yes_other": 0.0009910428940202109
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 1,
+      "fact": "crack_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 0.0951060734917822
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 1,
+      "fact": "fall_visible",
+      "p_yes_expected": 0.5152450799942017,
+      "p_yes_other": 0.01586189649242442
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 2,
+      "fact": "crack_visible",
+      "p_yes_expected": null,
+      "p_yes_other": 0.09962608149832401
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 2,
+      "fact": "fall_visible",
+      "p_yes_expected": 0.9647935628890991,
+      "p_yes_other": 0.002721393230604008
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 0,
+      "fact": "crack_visible",
+      "p_yes_expected": 0.9956440329551697,
+      "p_yes_other": 0.0012932972220369265
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 0,
+      "fact": "fall_visible",
+      "p_yes_expected": 0.9981789588928223,
+      "p_yes_other": 0.0009641653337894241
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 1,
+      "fact": "crack_visible",
+      "p_yes_expected": 0.9982461333274841,
+      "p_yes_other": 0.10233269686759741
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 1,
+      "fact": "fall_visible",
+      "p_yes_expected": 0.5152450799942017,
+      "p_yes_other": 0.01588675930397585
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 2,
+      "fact": "crack_visible",
+      "p_yes_expected": 0.9946185350418091,
+      "p_yes_other": 0.10514954939408198
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 2,
+      "fact": "fall_visible",
+      "p_yes_expected": 0.9647935628890991,
+      "p_yes_other": 0.0027721369755454362
+    }
+  ],
+  "comm_gap": [
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 0,
+      "gap_mean": 0.08966023290316366,
+      "gap_at_reveal": 0.009501280875603993
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 1,
+      "gap_mean": 0.09077426951709312,
+      "gap_at_reveal": 0.007935224898626282
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 2,
+      "gap_mean": 0.08382572554316599,
+      "gap_at_reveal": 0.018995246544513785
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 0,
+      "gap_mean": 0.19320946180786955,
+      "gap_at_reveal": 0.09955252634566993
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 1,
+      "gap_mean": 0.18567435371355678,
+      "gap_at_reveal": 0.0902903976453827
+    },
+    {
+      "story": "cafe_bomb",
+      "version": "suspense",
+      "seed": 2,
+      "gap_mean": 0.288680265067857,
+      "gap_at_reveal": 0.26562785776514264
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 0,
+      "gap_mean": 0.5442656518624007,
+      "gap_at_reveal": 0.8120956678454448
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 1,
+      "gap_mean": 0.5151118841584924,
+      "gap_at_reveal": 0.7559998977316681
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "surprise",
+      "seed": 2,
+      "gap_mean": 0.5359768594512183,
+      "gap_at_reveal": 0.8051881892840609
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 0,
+      "gap_mean": 0.1760745512547672,
+      "gap_at_reveal": 0.09543227537808467
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 1,
+      "gap_mean": 0.34724819981248906,
+      "gap_at_reveal": 0.3821812944576908
+    },
+    {
+      "story": "poisoned_wine",
+      "version": "suspense",
+      "seed": 2,
+      "gap_mean": 0.28811516812286914,
+      "gap_at_reveal": 0.18657682915674736
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 0,
+      "gap_mean": 0.15724254794561854,
+      "gap_at_reveal": 0.12493243171040423
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 1,
+      "gap_mean": 0.17816435288562824,
+      "gap_at_reveal": 0.08117964439193696
+    },
+    {
+      "story": "thin_ice",
+      "version": "surprise",
+      "seed": 2,
+      "gap_mean": 0.20039176691919,
+      "gap_at_reveal": 0.1256063374610682
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 0,
+      "gap_mean": 0.39637605719662905,
+      "gap_at_reveal": 0.19115134658354685
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 1,
+      "gap_mean": 0.538460659374279,
+      "gap_at_reveal": 0.3557505165150277
+    },
+    {
+      "story": "thin_ice",
+      "version": "suspense",
+      "seed": 2,
+      "gap_mean": 0.5119514901757735,
+      "gap_at_reveal": 0.2836570754184063
+    }
+  ]
+}
