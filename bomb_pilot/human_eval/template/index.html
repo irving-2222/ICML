@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>短片观看打分</title>
+<style>
+  :root { --fg:#1f2328; --muted:#656d76; --line:#d0d7de; --accent:#0969da; --bg:#ffffff; --card:#f6f8fa; --err:#cf222e; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+  #app { max-width:780px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-size:24px; margin:8px 0 16px; }
+  .meta { color:var(--muted); font-size:14px; margin-bottom:8px; }
+  .intro { background:var(--card); border-left:4px solid var(--accent); padding:10px 14px; margin:12px 0; }
+  video { width:100%; background:#000; border-radius:8px; display:block; }
+  button { font-size:16px; padding:10px 18px; border-radius:8px; border:1px solid var(--line); background:#fff; cursor:pointer; margin:10px 8px 0 0; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button:disabled { opacity:.45; cursor:not-allowed; }
+  .q { border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:14px 0; }
+  .qt { font-weight:600; margin-bottom:8px; }
+  .hint { display:block; font-weight:400; color:var(--muted); font-size:13px; }
+  .sl { display:grid; grid-template-columns: 1fr 140px 52px; gap:10px; align-items:center; margin:6px 0; }
+  .sl input { width:100%; }
+  .pct { text-align:right; font-variant-numeric: tabular-nums; color:var(--accent); font-weight:600; }
+  .lk { display:flex; flex-wrap:wrap; align-items:center; gap:6px 14px; }
+  .lk label { white-space:nowrap; }
+  .end { color:var(--muted); font-size:13px; }
+  textarea, input[type=text] { width:100%; font-size:16px; padding:8px; border:1px solid var(--line); border-radius:6px; }
+  .err { color:var(--err); min-height:1.4em; }
+  .hidden { display:none; }
+  @media (max-width:560px) { .sl { grid-template-columns: 1fr; } .pct { text-align:left; } }
+</style>
+<script src="data.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+(function () {
+  "use strict";
+  var S = window.STUDY;
+  var app = document.getElementById("app");
+  var st = { a: null, vi: 0, t: 0, rows: [], prev: null, t0: 0, replays: 0 };
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function $(id) { return document.getElementById(id); }
+  function render(html) { app.innerHTML = html; window.scrollTo(0, 0); }
+  function cur() {
+    var v = st.a.videos[st.vi];
+    var story = S.stories[v.story];
+    return { v: v, story: story, seq: story.versions[v.version] };
+  }
+  function saveLocal() { try { localStorage.setItem("ratings_" + st.a.rater, JSON.stringify(st.rows)); } catch (e) {} }
+
+  // ---------- 欢迎页 ----------
+  function welcome() {
+    render(
+      "<h1>短片观看打分</h1>" +
+      "<p>你将观看 <b>3 段</b>很短的 AI 生成短片，每段由 6 个镜头组成。每看完一个镜头，回答几个简单的问题。全程约 8 分钟。</p>" +
+      "<ul><li>请按顺序观看，凭<b>第一感觉</b>回答，没有对错之分。</li>" +
+      "<li>请<b>不要刷新或关闭页面</b>，直到最后下载结果文件。</li>" +
+      "<li>不要和其他参与者讨论短片内容。</li></ul>" +
+      "<p><label>请输入你拿到的编号：<input type='text' id='rid' placeholder='例如 R01'></label></p>" +
+      "<button class='primary' id='go'>开始</button><p class='err' id='err'></p>"
+    );
+    $("go").onclick = function () {
+      var id = $("rid").value.trim().toUpperCase();
+      var a = null;
+      for (var i = 0; i < S.assignments.length; i++) if (S.assignments[i].rater === id) a = S.assignments[i];
+      if (!a) { $("err").textContent = "编号不存在，请确认后重新输入。"; return; }
+      st.a = a; st.vi = 0; startVideo();
+    };
+  }
+
+  function startVideo() { st.t = 0; st.prev = null; step(); }
+
+  // ---------- 题目组件 ----------
+  function beliefBlock(story) {
+    var keys = Object.keys(story.options);
+    var init = st.prev || {};
+    var h = "<div class='q'><div class='qt'>① " + esc(story.question) +
+      "<span class='hint'>拖动滑块，表示你觉得每种结局有多大可能（会自动换算成百分比，三项加起来是 100%）</span></div>";
+    keys.forEach(function (k) {
+      h += "<div class='sl'><div>" + esc(story.options[k]) + "</div>" +
+        "<input type='range' min='0' max='100' step='1' class='bel' data-k='" + k + "' value='" + (init[k] != null ? Math.round(init[k] * 100) : 0) + "'>" +
+        "<span class='pct' data-k='" + k + "'></span></div>";
+    });
+    return h + "</div>";
+  }
+  function likert(name, title, lo, hi) {
+    var h = "<div class='q'><div class='qt'>" + title + "</div><div class='lk'><span class='end'>" + lo + "</span>";
+    for (var i = 1; i <= 5; i++) h += "<label><input type='radio' name='" + name + "' value='" + i + "'> " + i + "</label>";
+    return h + "<span class='end'>" + hi + "</span></div></div>";
+  }
+  function bindSliders() {
+    var sliders = app.querySelectorAll(".bel");
+    function upd() {
+      var sum = 0; sliders.forEach(function (s) { sum += +s.value; });
+      sliders.forEach(function (s) {
+        var p = app.querySelector(".pct[data-k='" + s.dataset.k + "']");
+        p.textContent = sum > 0 ? Math.round(100 * s.value / sum) + "%" : "–";
+      });
+    }
+    sliders.forEach(function (s) { s.addEventListener("input", upd); });
+    upd();
+  }
+  function readBelief() {
+    var sliders = app.querySelectorAll(".bel"), sum = 0, b = {};
+    sliders.forEach(function (s) { sum += +s.value; });
+    if (sum <= 0) return null;
+    sliders.forEach(function (s) { b[s.dataset.k] = +s.value / sum; });
+    return b;
+  }
+  function radio(name) { var r = app.querySelector("input[name='" + name + "']:checked"); return r ? +r.value : null; }
+
+  // ---------- 每一步 ----------
+  function step() {
+    var c = cur(), T = c.seq.length, t = st.t;
+    var head = "<div class='meta'>第 " + (st.vi + 1) + " / " + st.a.videos.length + " 段短片" +
+      (t > 0 ? " · 第 " + t + " / " + T + " 个镜头" : " · 开始观看前") + "</div>";
+    st.replays = 0;
+    if (t === 0) {
+      render(head + "<div class='intro'>" + esc(c.story.intro) + "</div>" +
+        "<p>还没开始看，请先凭这句介绍猜一猜：</p>" + beliefBlock(c.story) +
+        "<button class='primary' id='next'>开始看第 1 个镜头</button><p class='err' id='err'></p>");
+      bindSliders(); st.t0 = Date.now();
+      $("next").onclick = function () { submit(false); };
+      return;
+    }
+    var shot = c.seq[t - 1];
+    var src = "clips/" + c.v.story + "/" + shot + "_seed" + c.v.seed + ".mp4";
+    var last = t === T;
+    var qs = beliefBlock(c.story) +
+      likert("surprise", "② 刚才这个镜头让你有多意外？", "1 完全不意外", "5 非常意外") +
+      likert("tension", "③ 你现在有多紧张？", "1 完全放松", "5 非常紧张");
+    if (!last) qs += likert("curiosity", "④ 你现在有多想知道接下来会发生什么？", "1 完全不想", "5 非常想");
+    if (last) qs += "<div class='q'><div class='qt'>⑤ 用一句话描述这段短片讲了什么</div><textarea id='comp' rows='2'></textarea></div>";
+    render(head +
+      "<video id='vid' playsinline muted preload='auto' src='" + src + "'></video>" +
+      "<button class='primary' id='play'>▶ 播放第 " + t + " 个镜头</button>" +
+      "<button id='replay' class='hidden'>↺ 重看这个镜头</button>" +
+      "<div id='qs' class='hidden'>" + qs +
+      "<button class='primary' id='next'>" + (last ? (st.vi + 1 < st.a.videos.length ? "下一段短片" : "完成") : "看下一个镜头") + "</button>" +
+      "<p class='err' id='err'></p></div>");
+    var vid = $("vid");
+    $("play").onclick = function () { $("play").disabled = true; vid.play(); };
+    $("replay").onclick = function () { st.replays++; vid.currentTime = 0; vid.play(); };
+    vid.addEventListener("ended", function () {
+      $("play").classList.add("hidden");
+      $("replay").classList.remove("hidden");
+      if ($("qs").classList.contains("hidden")) {
+        $("qs").classList.remove("hidden"); bindSliders(); st.t0 = Date.now();
+        $("qs").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    vid.addEventListener("error", function () { $("err").textContent = "视频加载失败：" + src; });
+    $("next").onclick = function () { submit(last); };
+  }
+
+  function submit(last) {
+    var c = cur(), t = st.t;
+    var b = readBelief();
+    if (!b) { $("err").textContent = "请拖动滑块，表示你对结局的判断。"; return; }
+    var row = {
+      rater: st.a.rater, video_order: st.vi + 1, story: c.v.story, version: c.v.version, seed: c.v.seed,
+      t: t, shot: t > 0 ? c.seq[t - 1] : "", surprise: "", tension: "", curiosity: "", comprehension: "",
+      replays: st.replays, rt_ms: Date.now() - st.t0
+    };
+    Object.keys(b).forEach(function (k) { row["p_" + k] = b[k].toFixed(4); });
+    if (t > 0) {
+      row.surprise = radio("surprise"); row.tension = radio("tension");
+      if (row.surprise == null || row.tension == null) { $("err").textContent = "请回答所有问题。"; return; }
+      if (!last) { row.curiosity = radio("curiosity"); if (row.curiosity == null) { $("err").textContent = "请回答所有问题。"; return; } }
+      if (last) {
+        row.comprehension = ($("comp").value || "").trim();
+        if (row.comprehension.length < 4) { $("err").textContent = "请用一句话描述短片内容。"; return; }
+      }
+    }
+    st.rows.push(row); st.prev = b; saveLocal();
+    if (!last) { st.t++; step(); return; }
+    st.vi++;
+    if (st.vi < st.a.videos.length) startVideo(); else finish();
+  }
+
+  // ---------- 结束 ----------
+  function toCSV(rows) {
+    var cols = ["rater", "video_order", "story", "version", "seed", "t", "shot"];
+    var pk = {};
+    rows.forEach(function (r) { Object.keys(r).forEach(function (k) { if (k.indexOf("p_") === 0) pk[k] = 1; }); });
+    cols = cols.concat(Object.keys(pk).sort(), ["surprise", "tension", "curiosity", "comprehension", "replays", "rt_ms"]);
+    var lines = [cols.join(",")];
+    rows.forEach(function (r) {
+      lines.push(cols.map(function (k) {
+        var v = r[k] == null ? "" : String(r[k]);
+        return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+      }).join(","));
+    });
+    return "﻿" + lines.join("\n");
+  }
+  function download() {
+    var blob = new Blob([toCSV(st.rows)], { type: "text/csv;charset=utf-8" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "ratings_" + st.a.rater + ".csv";
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  function finish() {
+    render("<h1>完成，谢谢你！</h1>" +
+      "<p>请点击下面的按钮下载结果文件 <b>ratings_" + esc(st.a.rater) + ".csv</b>，然后把它发给组织者。</p>" +
+      "<button class='primary' id='dl'>下载结果文件</button>" +
+      "<p class='meta'>如果没有自动下载，请再点一次按钮。下载完成后再关闭页面。</p>");
+    $("dl").onclick = download;
+    download();
+  }
+
+  welcome();
+})();
+</script>
+</body>
+</html>

@@ -2,3 +2,5 @@ outputs/
 logs/
 __pycache__/
 *.pyc
+human_eval/package/
+human_eval/report/
