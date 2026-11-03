@@ -1,0 +1,261 @@
+{
+  "story": "thin_ice",
+  "version": "surprise",
+  "seed": 0,
+  "shots": [
+    "s1_establish",
+    "s2_filler",
+    "s3_skate",
+    "s4_center",
+    "s5_blades",
+    "s6_break"
+  ],
+  "reveal_index": 1,
+  "final_index": 5,
+  "viewer_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "modes": {
+    "video": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.14349629587614104,
+              "escape": 0.3124029654710555,
+              "harm": 0.5441007386528035
+            },
+            {
+              "calm": 0.8105950783091104,
+              "escape": 0.09872823245349613,
+              "harm": 0.09067668923739353
+            },
+            {
+              "calm": 0.6886989309822467,
+              "escape": 0.15392815398140824,
+              "harm": 0.1573729150363451
+            },
+            {
+              "calm": 0.8570333391064364,
+              "escape": 0.059578892945327866,
+              "harm": 0.08338776794823569
+            },
+            {
+              "calm": 0.9207993589999746,
+              "escape": 0.031175765974955163,
+              "harm": 0.04802487502507031
+            },
+            {
+              "calm": 0.9096756013511181,
+              "escape": 0.034674695678736066,
+              "harm": 0.055649702970145744
+            },
+            {
+              "calm": 0.05776671858829436,
+              "escape": 0.19443128856427183,
+              "harm": 0.7478019928474338
+            }
+          ],
+          "entropy": [
+            0.885854066414756,
+            0.5611381299972558,
+            0.7608654373822128,
+            0.46187146872267965,
+            0.30029192671557187,
+            0.3308155745264024,
+            0.6375791152135165
+          ],
+          "surprise": [
+            null,
+            0.8344285743201413,
+            0.14951283759478598,
+            0.20666895752924505,
+            0.07825201026589333,
+            0.013932641332299323,
+            1.1092094959397754
+          ],
+          "suspense_rollout": [
+            0.26916524227629607,
+            0.0781417561601104,
+            0.27886938136360645,
+            0.14184101658379641,
+            0.07745330846368448,
+            0.09201291690526871,
+            null
+          ]
+        }
+      },
+      "imagined_next_shots": [
+        [
+          "The next shot will likely reveal a person or group walking cautiously across the icy surface of the lake.",
+          "I expect the next shot to reveal a person or group of people standing on the frozen lake, perhaps preparing to skate or fish.",
+          "The next shot will likely show a person walking or standing on the frozen lake, possibly wearing winter clothing and looking out over the icy expanse.",
+          "A group of people might be seen ice skating or enjoying winter activities on the frozen lake.",
+          "I expect the next shot to reveal a lone figure walking carefully across the icy surface of the frozen lake.",
+          "I expect the next shot to reveal a lone figure or a small group of people braving the cold on the ice-covered lake, perhaps preparing for an activity like ice fishing or skating.",
+          "I expect the next shot to reveal a serene and expansive view of the frozen lake, possibly with a lone figure skating or walking across its icy surface.",
+          "The next shot will likely reveal someone walking or ice skating on the frozen lake, setting the scene with human activity."
+        ],
+        [
+          "The next shot will likely show the person reaching their destination or interacting with someone or something on the lake.",
+          "I expect the next shot to focus more closely on the man's face or his surroundings to give us a better understanding of his emotions or the environment.",
+          "The next shot might show the person reaching their destination or encountering someone or something on the ice.",
+          "The next shot will likely focus on the man reaching his destination or engaging in an activity related to why he's carrying another pair of skates, perhaps setting up for ice skating with someone else.",
+          "The next shot will likely show the person reaching their destination or encountering another individual on the ice.",
+          "I expect the next shot to show either another person entering the scene or a closer view of the lone skater interacting with their surroundings on the ice.",
+          "I expect the next shot to possibly reveal more about the person's destination or introduce another character on the ice.",
+          "The next shot will likely show the person reaching a specific destination or encountering someone else on the frozen lake."
+        ],
+        [
+          "I expect the next shot to return to the person, perhaps engaging in some activity like skating or interacting with someone else on the ice.",
+          "I expect the next shot to reveal either another person joining the lone skater or possibly a close-up showing the skater's face as they continue across the ice, adding context or emotion to their journey.",
+          "I expect the next shot to potentially reveal the person who created the skate marks on the ice or someone else interacting with the frozen lake environment.",
+          "I expect the next shot to show someone ice skating across the ice, creating new lines and patterns on the frozen surface.",
+          "I expect the next shot to show the person who was ice skating returning or another skater entering the scene, possibly interacting with the marks left in the ice.",
+          "The next shot will likely focus on another individual engaging with the icy landscape, perhaps joining the person already present or introducing a new character to explore the serene environment further.",
+          "I expect the next shot to reveal another person entering the scene, perhaps approaching or joining the first character on the ice.",
+          "I expect the next shot to reveal either another person joining the lone figure or a sudden twist like the ice cracking underfoot."
+        ],
+        [
+          "The next shot might introduce another person skating or reveal more of the serene frozen landscape around them.",
+          "I expect the next shot to feature another person skating or interacting with the icy surface in some way, possibly connecting their experience to the joy already depicted.",
+          "The next shot may showcase another person joining the ice skater or a close-up reaction to the enjoyment being displayed.",
+          "The next shot is likely to focus on either more individuals enjoying ice skating or a broader view of the serene winter landscape surrounding the lake.",
+          "I expect the next shot to feature another individual engaging in an ice skating activity or a reaction to the person currently skating.",
+          "The next shot will likely feature another person engaging in ice skating or possibly a reaction from someone observing the skaters.",
+          "I expect the next shot to showcase either another person joining the ice-skating activity or reveal more of the frozen lake's expanse, possibly capturing any dynamic elements like an animal or natural feature interacting with the serene environment.",
+          "The next shot might introduce another character or show a close-up interaction on the ice, building on the social aspect of the scene."
+        ],
+        [
+          "The next shot will likely introduce another person ice skating or perhaps a wider view showing more of the lake and its surroundings.",
+          "The next shot might show another skater joining the scene or a close-up of the icy lake's surface, highlighting its texture and beauty.",
+          "The next shot will likely introduce another ice skater or show a group enjoying the frozen lake together.",
+          "The next shot might showcase another person ice skating or perhaps a group enjoying the frozen lake together.",
+          "The next shot will likely introduce a new skater or reveal more of the serene ice rink's environment, possibly with an unexpected moment or shift in the atmosphere.",
+          "The next shot may feature another person interacting with the ice, possibly joining in or performing their own skating routine.",
+          "The next shot might show another person or group enjoying activities on the ice, adding more dynamic interactions to the serene setting.",
+          "I expect the next shot to show either another ice skater joining the scene or a continuation of the joyful skating activity, potentially including a group interacting or performing tricks together."
+        ],
+        [
+          "I expect the next shot to capture a moment where either another skater joins the scene or there's an interaction with the existing skaters, possibly showing a shared activity or challenge on the ice.",
+          "The next shot will likely showcase more ice skating action or possibly reveal another skater joining the scene, adding more dynamism to the winter activity.",
+          "The next shot will likely depict either another person skating or the ice itself being interacted with in some dynamic way.",
+          "The next shot will likely showcase either another individual engaging with ice skating or capture a broader view of the environment where multiple skaters interact, enhancing the narrative's connection to the community and shared activity on the frozen lake.",
+          "The next shot might show a group of ice skaters or a person trying to start skating, adding more movement and activity to the serene, icy setting.",
+          "I expect the next shot to depict another person gliding gracefully on the ice or a closer interaction with the skaters previously seen.",
+          "The next shot will likely capture another skater or a group of skaters enjoying the ice, possibly in a different area of the frozen lake or engaging in a new activity.",
+          "I expect the next shot to reveal more people joining the skating activity or perhaps capture a scenic view of the ice and its surroundings under the bright sky."
+        ]
+      ],
+      "direct_rating": [
+        null,
+        1.6536904626118485,
+        1.7549836589605547,
+        1.6519776608583925,
+        1.3078401944931102,
+        1.4130011673696572,
+        4.096480954554863
+      ]
+    },
+    "text": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.14349629587614104,
+              "escape": 0.3124029654710555,
+              "harm": 0.5441007386528035
+            },
+            {
+              "calm": 0.522974676295667,
+              "escape": 0.1953571673799748,
+              "harm": 0.2816681563243582
+            },
+            {
+              "calm": 0.7904160246029056,
+              "escape": 0.10972399636633808,
+              "harm": 0.0998599790307563
+            },
+            {
+              "calm": 0.9437205958856684,
+              "escape": 0.022006741654273985,
+              "harm": 0.03427266246005768
+            },
+            {
+              "calm": 0.9260536817813569,
+              "escape": 0.018921845974375802,
+              "harm": 0.05502447224426726
+            },
+            {
+              "calm": 0.9446510510544411,
+              "escape": 0.01509178171823648,
+              "harm": 0.04025716722732242
+            },
+            {
+              "calm": 3.5224863973158885e-05,
+              "escape": 0.020403904838976472,
+              "harm": 0.9795608702970504
+            }
+          ],
+          "entropy": [
+            0.885854066414756,
+            0.9237911832187876,
+            0.5993427217856216,
+            0.23144421806573567,
+            0.27833591971337845,
+            0.22428469955698355,
+            0.09102627936668162
+          ],
+          "surprise": [
+            null,
+            0.47599834067376817,
+            0.33453270108177213,
+            0.1884099372256088,
+            0.02742761463643874,
+            0.024054206150881313,
+            1.3321481615578854
+          ]
+        }
+      },
+      "direct_rating": [
+        null,
+        1.3816908368272607,
+        1.601948198800983,
+        1.1653724037644508,
+        1.1839805542475688,
+        1.2266472102542139,
+        4.836255227010042
+      ]
+    }
+  },
+  "probes": {
+    "crack_visible": {
+      "question": "Is there a visible crack in the ice or a thin-ice warning sign in this shot?",
+      "expected_shots": [
+        "s2_reveal"
+      ],
+      "p_yes": [
+        5.119097204442369e-05,
+        0.0066510410979390144,
+        2.7401336410548538e-05,
+        0.0005527787725441158,
+        0.0002496920569683425,
+        0.005585422972217202
+      ]
+    },
+    "fall_visible": {
+      "question": "Is a person falling through the ice into the water in this shot?",
+      "expected_shots": [
+        "s6_break"
+      ],
+      "p_yes": [
+        0.00035766736255027354,
+        0.00019447145314188674,
+        0.00010493920126464218,
+        0.003197265905328095,
+        0.0011008705478161573,
+        0.9981789588928223
+      ]
+    }
+  },
+  "label_mass_mean": 0.9999273620747231,
+  "label_mass_min": 0.9994316697120667
+}

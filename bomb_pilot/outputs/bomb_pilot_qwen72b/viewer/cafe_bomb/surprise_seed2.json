@@ -1,0 +1,261 @@
+{
+  "story": "cafe_bomb",
+  "version": "surprise",
+  "seed": 2,
+  "shots": [
+    "s1_establish",
+    "s2_filler",
+    "s3_woman",
+    "s4_man",
+    "s5_clock",
+    "s6_explosion"
+  ],
+  "reveal_index": 1,
+  "final_index": 5,
+  "viewer_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "modes": {
+    "video": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.9972266204958813,
+              "escape": 0.0014198212095188655,
+              "harm": 0.0013535582945998024
+            },
+            {
+              "calm": 0.9966141465228211,
+              "escape": 0.0012760596785151366,
+              "harm": 0.002109793798663734
+            },
+            {
+              "calm": 0.9838553079687261,
+              "escape": 0.0051355466503360415,
+              "harm": 0.011009145380937887
+            },
+            {
+              "calm": 0.9954978620994729,
+              "escape": 0.0014424859440192003,
+              "harm": 0.003059651956507959
+            },
+            {
+              "calm": 0.9984335299904344,
+              "escape": 0.0004979972022557228,
+              "harm": 0.0010684728073098802
+            },
+            {
+              "calm": 0.9954995693319163,
+              "escape": 0.0012804655489844702,
+              "harm": 0.0032199651190992795
+            },
+            {
+              "calm": 0.08462999832735708,
+              "escape": 0.2853062035807334,
+              "harm": 0.6300637980919096
+            }
+          ],
+          "entropy": [
+            0.01913313179665186,
+            0.022649061121348756,
+            0.08440339152833547,
+            0.028801390802747833,
+            0.011525861194990406,
+            0.028669139028425442,
+            0.7808649199056988
+          ],
+          "surprise": [
+            null,
+            0.0009837092472267908,
+            0.016027540657257477,
+            0.014573339005628218,
+            0.0036708308805421448,
+            0.0037214649033752182,
+            1.1416160414879224
+          ],
+          "suspense_rollout": [
+            0.017676887722820955,
+            0.004158391391152397,
+            0.01941564215643217,
+            0.005546465185149008,
+            0.0019364082405969698,
+            0.005574186590910237,
+            null
+          ]
+        }
+      },
+      "imagined_next_shots": [
+        [
+          "The next shot will likely show the interior of the cafe with people sitting at tables, enjoying their drinks and conversations.",
+          "I expect the next shot to introduce a cozy corner of the cafe, perhaps with a person sitting alone at a table.",
+          "The next shot is likely to introduce a character either entering the cafe or approaching a table, setting the scene with their presence.",
+          "I expect the next shot to introduce the interior of the cozy café with a view of empty tables and chairs, setting the scene.",
+          "I expect the next shot to introduce the interior of the cozy cafe with patrons enjoying their drinks or food.",
+          "I expect the next shot to show the entrance or interior of a quaint and cozy cafe.",
+          "I expect the next shot to show a view of the interior of the cafe with some patrons enjoying their drinks or food.",
+          "I expect the next shot to introduce us to the main character seated at a table in the quiet, cozy ambiance of the cafe."
+        ],
+        [
+          "The next shot will likely show either a continuation of their interaction or possibly a shift to another part of the cafe or a new character entering.",
+          "The next shot might show either of them speaking or reacting to something, possibly bringing new elements into their conversation or interaction.",
+          "The next shot will likely focus on the woman as she responds or shares her thoughts in the conversation.",
+          "The woman might take a sip of her drink or respond with some hand gestures as they continue their conversation.",
+          "I expect the next shot to show a continuation of their conversation or perhaps a change in their expressions or actions as they engage more deeply.",
+          "The man may take another sip of his coffee and perhaps laugh or continue speaking animatedly.",
+          "The next shot will likely focus on either the man or the woman as they continue their conversation, possibly zooming in for a closer look at their expressions.",
+          "The next shot might show the woman taking a sip of her coffee or responding to the man's conversation with a gesture."
+        ],
+        [
+          "The next shot will likely show a different part of the cafe or another character entering the scene, potentially adding context or conflict to the interaction between the man and woman.",
+          "I expect the next shot to return to the conversation at the table or introduce another element related to the two individuals at the cafe.",
+          "I expect the next shot to either show another character entering the scene or focus on the man and woman continuing their conversation, perhaps revealing more about their relationship or the purpose of their meeting.",
+          "I expect the next shot to either return to the couple at the table, possibly showing their reaction or conversation, or introduce someone entering the cafe, potentially to disrupt or expand the narrative.",
+          "I expect the next shot to reveal something happening with or near the pair of shoes and the handbag, possibly involving a character's interaction or movement around them.",
+          "I expect the next shot to either show another person entering the cafe or to shift focus back to the two people at the table, perhaps revealing more about their conversation or relationship.",
+          "I expect the next shot to show either the characters continuing their conversation or someone entering the cafe, possibly to interact with them or disrupt the moment.",
+          "I expect the next shot to show the woman or man reaching for their handbag or shoes, possibly indicating they're preparing to leave or search for something inside."
+        ],
+        [
+          "I expect the next shot to focus on the man's reaction or his perspective in conversation with the woman at the table.",
+          "The next shot might focus on the man's perspective or show something he is reacting to that relates back to their interaction or his personal thoughts.",
+          "I expect the next shot to focus on the man's face, showing his reaction or continuing the dialogue with the woman.",
+          "The next shot will likely focus on the man, perhaps showing his reaction or him speaking to the woman.",
+          "The next shot will likely return to the man's perspective, possibly showing him talking or reacting to the woman as they continue their conversation.",
+          "The next shot might focus on the man's reaction or continue the conversation, possibly revealing more about their interaction or the context of their meeting.",
+          "I expect the next shot to focus on the man’s reaction or perhaps his own engagement with the coffee, maintaining the warm and intimate atmosphere of their interaction.",
+          "The next shot is likely to return to the man, perhaps showing his reaction or continuing their conversation."
+        ],
+        [
+          "The next shot will likely return to both characters in conversation, possibly highlighting a shared moment or reaction between them that connects their earlier individual close-ups.",
+          "I expect the next shot to show either a continuation of their conversation or a shift in the scene that might reveal more context about their relationship or the setting.",
+          "I expect the next shot to show either the woman or the man continuing their conversation, possibly revealing more about their relationship or the context of their meeting.",
+          "The next shot might reveal a shift in their conversation or introduce another character or setting change to add more depth to the story.",
+          "I expect the next shot to either return to the couple having their conversation or introduce another character or event that adds context or conflict to their interaction.",
+          "The next shot will likely depict something that connects or contrasts with their current conversation, possibly showing an object on the table or a change in their expressions as the dialogue develops.",
+          "The next shot might transition to another angle or setting, possibly focusing on either the conversation between the two characters or introducing a new character into the scene.",
+          "The next shot is likely to focus on either continuing the interaction between the man and woman at the cafe or showing another angle that provides more context to their conversation or setting."
+        ],
+        [
+          "The next shot is likely to depict a change in the scene's mood or introduce a new character or event that progresses the story from their current interaction or reflects on the passing time suggested by the clock.",
+          "The next shot will likely return to the man and woman at their table, possibly capturing a moment where they share an important or emotional conversation as suggested by the time passing on the clock.",
+          "I expect the next shot to show either the woman or the man leaving their table, signaling a change in their interaction or the passage of time.",
+          "I expect the next shot to either return to the two individuals at the table showing a progression in their interaction or introduce a new character or element that impacts their scene.",
+          "The next shot might reveal another customer or event in the café that catches the attention of either the woman or the man, possibly adding new context or a turn in their conversation.",
+          "The next shot might show the woman or man reacting to something happening in the café, perhaps another character entering or an event that disrupts their meeting.",
+          "The next shot is likely to show either the woman or the man checking the time, indicating they are conscious of the passing time during their meeting.",
+          "The next shot might show the couple continuing their conversation or a significant moment indicating the passage of time within their meeting."
+        ]
+      ],
+      "direct_rating": [
+        null,
+        1.2293277253247652,
+        1.6346386471923324,
+        1.3036027442958584,
+        1.4249228231128654,
+        1.6840249626839068,
+        4.906566510093398
+      ]
+    },
+    "text": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.9972266204958813,
+              "escape": 0.0014198212095188655,
+              "harm": 0.0013535582945998024
+            },
+            {
+              "calm": 0.999912173961101,
+              "escape": 3.943820759111923e-05,
+              "harm": 4.8387831307842845e-05
+            },
+            {
+              "calm": 0.9989814646002282,
+              "escape": 0.0005405038486717456,
+              "harm": 0.00047803155110004626
+            },
+            {
+              "calm": 0.9995337414611849,
+              "escape": 0.00024401883123856304,
+              "harm": 0.00022223970757657545
+            },
+            {
+              "calm": 0.999927297563219,
+              "escape": 3.4721933000498476e-05,
+              "harm": 3.7980503780503776e-05
+            },
+            {
+              "calm": 0.9982341503150248,
+              "escape": 0.0006879106553250232,
+              "harm": 0.001077939029650148
+            },
+            {
+              "calm": 6.876431706589601e-05,
+              "escape": 0.003847377443926372,
+              "harm": 0.9960838582390077
+            }
+          ],
+          "entropy": [
+            0.01913313179665186,
+            0.0008816125391500192,
+            0.007954745834989858,
+            0.003973548228369028,
+            0.0007425837339177761,
+            0.012869682793486185,
+            0.02363015159221541
+          ],
+          "surprise": [
+            null,
+            0.003289547778162579,
+            0.0011409997445419025,
+            0.0006770100175947848,
+            0.00048233085246942724,
+            0.002091630188768629,
+            1.4093902579826856
+          ]
+        }
+      },
+      "direct_rating": [
+        null,
+        1.0040825194476852,
+        1.536512815916467,
+        1.2694905554353113,
+        1.1482704851363792,
+        1.3513336033960286,
+        4.977693068719418
+      ]
+    }
+  },
+  "probes": {
+    "bomb_visible": {
+      "question": "Is there a bomb or explosive device visible in this shot?",
+      "expected_shots": [
+        "s2_reveal"
+      ],
+      "p_yes": [
+        1.4159124930301914e-06,
+        0.00040698454540688545,
+        2.0349479541437177e-06,
+        5.902409796476604e-07,
+        8.751161431064247e-06,
+        0.007809773553162813
+      ]
+    },
+    "explosion_visible": {
+      "question": "Is there an explosion visible in this shot?",
+      "expected_shots": [
+        "s6_explosion"
+      ],
+      "p_yes": [
+        7.842311617878295e-07,
+        7.623871525197501e-07,
+        5.480311315864128e-07,
+        2.2297216872857462e-07,
+        6.062364263925701e-06,
+        0.998586893081665
+      ]
+    }
+  },
+  "label_mass_mean": 0.999981388852403,
+  "label_mass_min": 0.9995212554931641
+}
