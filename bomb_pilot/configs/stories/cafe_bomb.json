@@ -1,0 +1,70 @@
+{
+  "id": "cafe_bomb",
+  "title": "The Bomb Under the Table",
+  "intro": "You are about to watch a short film, shot by shot. It takes place in a small cafe.",
+  "style": "Cinematic film still, 35mm film, soft warm afternoon light, shallow depth of field, realistic, high detail.",
+  "characters": {
+    "woman": "a young woman with short black hair wearing a red coat",
+    "man": "a middle-aged man with a short gray beard wearing a navy sweater"
+  },
+  "shots": {
+    "s1_establish": {
+      "prompt": "Wide establishing shot of a small cozy cafe with wooden tables on a sunny afternoon. {woman} and {man} sit at a corner table, smiling and chatting over two cups of coffee.",
+      "description": "Wide shot of a cozy cafe. A woman in a red coat and a bearded man sit at a corner table, smiling and chatting over coffee."
+    },
+    "s2_reveal": {
+      "prompt": "Low-angle close-up under a wooden cafe table: a black metal bomb with tangled red and blue wires and a glowing red digital countdown timer is taped beneath the tabletop, the legs of two seated people visible beside it.",
+      "description": "Close-up under their table: a bomb with a glowing red digital countdown timer is taped beneath the tabletop."
+    },
+    "s2_filler": {
+      "prompt": "Low-angle close-up under a wooden cafe table: a brown leather handbag resting on the wooden floor next to two pairs of shoes, sunlight on the floorboards.",
+      "description": "Close-up under their table: a handbag rests on the floor next to the two people's shoes."
+    },
+    "s3_woman": {
+      "prompt": "Medium shot of {woman} laughing and slowly stirring her coffee with a spoon, relaxed, sitting at a wooden cafe table.",
+      "description": "Medium shot: the woman laughs and stirs her coffee, relaxed."
+    },
+    "s4_man": {
+      "prompt": "Medium shot of {man} telling a funny story with animated hand gestures, smiling, sitting at a wooden cafe table.",
+      "description": "Medium shot: the man tells a funny story with animated gestures."
+    },
+    "s5_clock": {
+      "prompt": "Close-up of a round vintage wall clock in a cafe, the second hand moving steadily, warm light.",
+      "description": "Close-up of the cafe's wall clock, the second hand ticking."
+    },
+    "s6_explosion": {
+      "prompt": "Wide shot of a small cafe: a sudden huge explosion bursts from a corner table, fire, smoke and debris flying, windows shattering.",
+      "description": "A sudden explosion erupts from the couple's table, fire and debris everywhere."
+    }
+  },
+  "versions": {
+    "surprise": ["s1_establish", "s2_filler", "s3_woman", "s4_man", "s5_clock", "s6_explosion"],
+    "suspense": ["s1_establish", "s2_reveal", "s3_woman", "s4_man", "s5_clock", "s6_explosion"]
+  },
+  "reveal_index": 1,
+  "final_index": 5,
+  "questions": [
+    {
+      "id": "ending",
+      "text": "Based only on what you have seen so far, how do you think this scene will end?",
+      "options": {
+        "calm": "The two people finish their conversation and leave peacefully; nothing bad happens.",
+        "escape": "Something dangerous happens, but they get away unharmed.",
+        "harm": "Something dangerous happens and they get hurt."
+      },
+      "harm_option": "harm"
+    }
+  ],
+  "probe_facts": [
+    {
+      "id": "bomb_visible",
+      "question": "Is there a bomb or explosive device visible in this shot?",
+      "expected_shots": ["s2_reveal"]
+    },
+    {
+      "id": "explosion_visible",
+      "question": "Is there an explosion visible in this shot?",
+      "expected_shots": ["s6_explosion"]
+    }
+  ]
+}

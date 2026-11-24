@@ -1,0 +1,261 @@
+{
+  "story": "poisoned_wine",
+  "version": "suspense",
+  "seed": 1,
+  "shots": [
+    "s1_establish",
+    "s2_reveal",
+    "s3_serve",
+    "s4_toast",
+    "s5_drink",
+    "s6_collapse"
+  ],
+  "reveal_index": 1,
+  "final_index": 5,
+  "viewer_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "modes": {
+    "video": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.11297920012165506,
+              "escape": 0.5612524857670451,
+              "harm": 0.3257683141112998
+            },
+            {
+              "calm": 0.16158920348546982,
+              "escape": 0.34151601827425654,
+              "harm": 0.49689477824027367
+            },
+            {
+              "calm": 0.011629529097046202,
+              "escape": 0.29999897568484296,
+              "harm": 0.6883714952181108
+            },
+            {
+              "calm": 0.06116636421738024,
+              "escape": 0.3473349356072016,
+              "harm": 0.5914987001754182
+            },
+            {
+              "calm": 0.040468496889704456,
+              "escape": 0.1639013477069325,
+              "harm": 0.795630155403363
+            },
+            {
+              "calm": 0.03695546610389965,
+              "escape": 0.195507683279843,
+              "harm": 0.7675368506162573
+            },
+            {
+              "calm": 0.0007872881793713401,
+              "escape": 0.009769928075901324,
+              "harm": 0.9894427837447274
+            }
+          ],
+          "entropy": [
+            0.8518922069614655,
+            0.9183917569241998,
+            0.609904168395642,
+            0.7726080950210539,
+            0.5535196638972569,
+            0.5862358620374705,
+            0.05584095609036157
+          ],
+          "surprise": [
+            null,
+            0.28272126608821696,
+            0.2467283970536508,
+            0.11865466512065101,
+            0.27521979197608276,
+            0.04243271859674627,
+            0.2916314351372237
+          ],
+          "suspense_rollout": [
+            0.2546425048293901,
+            0.18340867219779788,
+            0.11790723351381444,
+            0.2288864901099496,
+            0.15856851717284232,
+            0.1548029196421333,
+            null
+          ]
+        }
+      },
+      "imagined_next_shots": [
+        [
+          "I expect the next shot to reveal a grand dining room with a long table set for an elaborate meal, exuding an air of antiquity and mystery.",
+          "I expect the next shot to introduce a group of formally dressed characters gathered around an opulent dining table in the dimly lit, atmospheric mansion.",
+          "The next shot is likely to reveal an ornate dining room with a long table set for an extravagant dinner, and possibly a character or two in period-appropriate attire.",
+          "The camera may pan around the opulent dining room, highlighting its vintage decor and possibly focusing on a family gathered at the long table.",
+          "I expect the next shot to reveal an elegantly set dining room table inside the old mansion, possibly with characters beginning their dinner or a ghostly presence lurking nearby.",
+          "I expect the next shot to reveal an elegantly set dining room table with characters preparing to sit down for the meal.",
+          "The next shot might reveal an opulent dining room with characters gathered around an antique table, setting the scene for an evening filled with mystery or tension.",
+          "The next shot might reveal guests arriving or the exterior of the atmospheric, vintage mansion where the dinner is set."
+        ],
+        [
+          "The next shot might reveal another character entering the room or provide a closer view of the two characters' expressions and interactions during their conversation.",
+          "I expect the next shot to possibly reveal the setting or context of their conversation, perhaps showing a key detail in the room or introducing another character.",
+          "The next shot may show either a close-up of their faces revealing deeper emotions or an object on the table that holds significance to their conversation.",
+          "I expect the next shot to either show the old woman responding or a shift to another part of the room or character, possibly providing context or reaction to their conversation.",
+          "The next shot may focus on a close-up of either character's face or their hands to emphasize their reactions or emotions following the previous interaction.",
+          "The next shot may reveal something unexpected on or around the table that could disrupt the otherwise calm and serious conversation between the two characters.",
+          "I expect the next shot to reveal more details about the setting or introduce another character to break the tension between the two individuals.",
+          "The next shot may reveal another character entering the room or a close-up of an object on the table that holds significance."
+        ],
+        [
+          "The elderly woman will likely hand the filled glass of red liquid to the younger man, setting the stage for a significant exchange or revelation.",
+          "I expect the next shot to show the woman offering the drink to the young man or taking a sip herself, potentially leading to a pivotal conversation or reaction.",
+          "I expect the next shot to show the man receiving or reacting to the woman's pour, potentially highlighting their interaction or the drink's significance.",
+          "The older woman finishes pouring her drink and turns to engage further with the younger man in conversation.",
+          "I expect the next shot to show the woman offering or serving the poured drink to the man at the table, possibly with a significant conversation taking place.",
+          "The next shot will likely show the older woman offering the glass of red liquid to the younger man or perhaps a reaction from the younger man as he notices her pouring it.",
+          "I expect the next shot to show either the young man being offered or drinking the wine, possibly indicating a significant moment between the two characters.",
+          "The next shot will likely show the woman offering the glass of red liquid to the man across the table, continuing their interaction with possibly a tense or significant exchange."
+        ],
+        [
+          "The next shot might show a close-up of the young man's face as he reacts to something significant or mysterious happening off-screen, possibly involving the old woman and her actions around the table.",
+          "The young man might toast or raise his glass in response to the woman's gesture, possibly initiating a conversation or expressing gratitude.",
+          "The young man will likely pick up the filled glass of wine and take a sip as they continue their interaction.",
+          "The next shot will likely show the older woman sitting back down and raising her glass in a toast or continuing their conversation over drinks.",
+          "The next shot will likely show a close-up of the young man reacting to something the elderly woman says or does after her offer.",
+          "The next shot will likely show the woman and man continuing their conversation, possibly with the man reacting to the woman's gesture of pouring and offering the drink.",
+          "The next shot may focus on the young man's reaction as he sees or interacts with what the woman is showing him, building on their interaction and hinting at its significance in the story.",
+          "The next shot will likely reveal the young man’s reaction after tasting the red wine poured by the elderly woman."
+        ],
+        [
+          "I expect the next shot to reveal the man's reaction after tasting the drink or show the woman's response to his actions.",
+          "I expect the next shot to reveal a sudden shift in mood or tension, possibly showing a reaction or consequence after the man takes a sip of the drink.",
+          "The next shot might reveal a sudden and mysterious reaction from the younger man after tasting the drink.",
+          "The next shot will likely show the man's reaction after tasting the drink or a close-up of his face as he processes its effects.",
+          "The next shot will likely reveal a reaction or consequence following the young man drinking the mysterious red liquid, perhaps indicating its effect on him.",
+          "The next shot might reveal the woman's reaction or consequences following the man's drink, potentially showing a shift in the atmosphere or her intentions.",
+          "The next shot will likely show a reaction or dialogue from the older woman, possibly commenting on the man's enjoyment of the drink.",
+          "The next shot may reveal the young man's reaction or changes in his condition after drinking from the glass, possibly hinting at some unexpected consequences."
+        ],
+        [
+          "The next shot might reveal a close-up of the woman's face as she observes the man’s reaction to the drink.",
+          "I expect the next shot to reveal a significant change in the young man’s demeanor or surroundings, possibly indicating a sudden realization or consequence related to the mysterious beverage he just drank.",
+          "The next shot might reveal the man reacting to tasting the wine or sharing a conversation with the woman, possibly hinting at deeper implications related to their interaction.",
+          "The next shot might reveal a sudden tension or consequence related to the drink the man just consumed, potentially involving the woman's reaction or another character entering the scene.",
+          "The next shot might reveal a moment of surprise or reaction from the young man as he notices something unusual about the wine's flavor or appearance, hinting at a twist or mystery in the plot.",
+          "I expect the next shot to reveal a reaction from either the woman or another character, possibly showing a significant moment or emotion following the man's toast.",
+          "I expect the next shot to show the man experiencing the effects of whatever was in the wine, potentially leading to a dramatic or revealing moment.",
+          "The next shot might reveal the woman's reaction or another significant detail about the mysterious wine, potentially leading to a pivotal moment in their interaction."
+        ]
+      ],
+      "direct_rating": [
+        null,
+        2.685255241114646,
+        2.9475954691297375,
+        2.808917737333104,
+        3.016823078971356,
+        3.080752804176882,
+        4.272957423291473
+      ]
+    },
+    "text": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.11297920012165506,
+              "escape": 0.5612524857670451,
+              "harm": 0.3257683141112998
+            },
+            {
+              "calm": 0.6379757197471726,
+              "escape": 0.2577834592760244,
+              "harm": 0.10424082097680294
+            },
+            {
+              "calm": 8.91094391897067e-06,
+              "escape": 0.035753750024600156,
+              "harm": 0.9642373390314809
+            },
+            {
+              "calm": 4.978082533277514e-06,
+              "escape": 0.023752373236556025,
+              "harm": 0.9762426486809107
+            },
+            {
+              "calm": 2.9945463550106955e-06,
+              "escape": 0.009736330965248171,
+              "harm": 0.9902606744883968
+            },
+            {
+              "calm": 2.0972502153866245e-07,
+              "escape": 6.118215732749336e-05,
+              "harm": 0.999938608117651
+            },
+            {
+              "calm": 7.595297375479013e-09,
+              "escape": 4.0765147283784975e-07,
+              "harm": 0.9999995847532297
+            }
+          ],
+          "entropy": [
+            0.8518922069614655,
+            0.7936336158241749,
+            0.14046661917479836,
+            0.10228292118849343,
+            0.049906098813073174,
+            0.0005991041830851687,
+            5.966584146075985e-06
+          ],
+          "surprise": [
+            null,
+            0.645592151340743,
+            1.0935688601963065,
+            0.016975291457135444,
+            0.019823079791617935,
+            0.013684696253219787,
+            8.609141365315969e-05
+          ]
+        }
+      },
+      "direct_rating": [
+        null,
+        1.5094488458560136,
+        3.916941982250332,
+        3.9831054649835647,
+        3.982798246811324,
+        4.221271780064063,
+        4.984075704876402
+      ]
+    }
+  },
+  "probes": {
+    "poison_visible": {
+      "question": "Is someone pouring liquid from a small vial labeled as poison in this shot?",
+      "expected_shots": [
+        "s2_reveal"
+      ],
+      "p_yes": [
+        6.42486344304416e-06,
+        0.6912067532539368,
+        0.0006459715077653527,
+        2.6180060103797587e-05,
+        8.366857400687877e-06,
+        9.90567023109179e-05
+      ]
+    },
+    "collapse_visible": {
+      "question": "Is a person collapsing or choking in this shot?",
+      "expected_shots": [
+        "s6_collapse"
+      ],
+      "p_yes": [
+        0.0013058868353255093,
+        5.600010354100959e-06,
+        0.0006994541618041694,
+        0.000444064469775185,
+        0.0010402806219644845,
+        0.9199530780315399
+      ]
+    }
+  },
+  "label_mass_mean": 0.9998820515366288,
+  "label_mass_min": 0.9992305040359497
+}

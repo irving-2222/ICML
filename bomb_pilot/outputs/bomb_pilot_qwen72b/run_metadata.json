@@ -1,0 +1,261 @@
+{
+  "model_id": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "model_revision": "89c86200743eec961a297729e7990e8f2ddbc4c5",
+  "model_download_all_files_verified": true,
+  "model_download_lfs_files_sha256_verified": 38,
+  "source_base_commit": "97705624c7beebe3e3f93158e67c44fb4e50b59b",
+  "configuration_commit": "99625b5",
+  "config_path": "configs/experiment_qwen72b.yaml",
+  "config_sha256": "7a8947c13a3473724393d18748ca5529233b20dbaeff8bc64d33ee05a89bea2d",
+  "configuration_changes": [
+    "viewer.model_id",
+    "output_dir"
+  ],
+  "source_code_changed_for_this_run": false,
+  "original_7b_results_preserved": true,
+  "inputs": {
+    "reused_clips": "outputs/bomb_pilot/clips",
+    "reused_assembled_videos_and_manifests": "outputs/bomb_pilot/videos",
+    "generated_new_clips": false
+  },
+  "hardware": {
+    "accelerator": "MetaX C550",
+    "gpu_groups": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ]
+  },
+  "software": {
+    "python": "3.10.10",
+    "torch": "2.4.0+metax2.29.2.5",
+    "transformers": "4.51.3",
+    "diffusers": "0.35.2",
+    "accelerate": "1.5.2",
+    "huggingface-hub": "0.34.4",
+    "numpy": "1.26.4"
+  },
+  "commands": {
+    "smoke": "CUDA_VISIBLE_DEVICES=0,1,2,3 python -m src.run_viewer --config configs/experiment_qwen72b.yaml --rank 0 --world_size 18",
+    "full": "CONFIG=configs/experiment_qwen72b.yaml GPUS_PER_PROC=4 NUM_GPUS=8 bash scripts/run_viewer.sh",
+    "analyze": "python -m src.analyze --config configs/experiment_qwen72b.yaml"
+  },
+  "timing": {
+    "task_started_at_utc": "2026-11-01T16:58:43.200579+00:00",
+    "download_elapsed_wall_seconds": 1740.179659,
+    "smoke": {
+      "started_at_utc": "2026-11-01T17:29:09.537244+00:00",
+      "ended_at_utc": "2026-11-01T17:57:43.029994+00:00",
+      "elapsed_total_seconds": 1713.493,
+      "evaluation_seconds_rounded": 1283,
+      "return_code": 0,
+      "label_mass_mean": 0.999988276947726,
+      "label_mass_min": 0.9996089935302734,
+      "telemetry_gpu": 0,
+      "gpu_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "peak_board_mib": 63643.62890625,
+      "status": "success",
+      "story": "cafe_bomb",
+      "version": "surprise",
+      "seed": 0
+    },
+    "full": {
+      "started_at_utc": "2026-11-01T17:58:20.617512+00:00",
+      "ended_at_utc": "2026-11-01T21:18:27.773004+00:00",
+      "elapsed_seconds": 12007.156,
+      "launcher_return_code": 0,
+      "completed": 18,
+      "expected": 18,
+      "missing": [],
+      "rank_errors": {},
+      "status": "success"
+    },
+    "full_stage_new_units": 17,
+    "full_stage_reused_smoke_units": 1,
+    "full_per_unit_evaluation_times": [
+      {
+        "rank": 0,
+        "story": "cafe_bomb",
+        "version": "surprise",
+        "seed": 2,
+        "evaluation_seconds_rounded": 1289
+      },
+      {
+        "rank": 0,
+        "story": "cafe_bomb",
+        "version": "suspense",
+        "seed": 1,
+        "evaluation_seconds_rounded": 1256
+      },
+      {
+        "rank": 0,
+        "story": "poisoned_wine",
+        "version": "surprise",
+        "seed": 0,
+        "evaluation_seconds_rounded": 1285
+      },
+      {
+        "rank": 0,
+        "story": "poisoned_wine",
+        "version": "surprise",
+        "seed": 2,
+        "evaluation_seconds_rounded": 1255
+      },
+      {
+        "rank": 0,
+        "story": "poisoned_wine",
+        "version": "suspense",
+        "seed": 1,
+        "evaluation_seconds_rounded": 1280
+      },
+      {
+        "rank": 0,
+        "story": "thin_ice",
+        "version": "surprise",
+        "seed": 0,
+        "evaluation_seconds_rounded": 1281
+      },
+      {
+        "rank": 0,
+        "story": "thin_ice",
+        "version": "surprise",
+        "seed": 2,
+        "evaluation_seconds_rounded": 1291
+      },
+      {
+        "rank": 0,
+        "story": "thin_ice",
+        "version": "suspense",
+        "seed": 1,
+        "evaluation_seconds_rounded": 1284
+      },
+      {
+        "rank": 1,
+        "story": "cafe_bomb",
+        "version": "surprise",
+        "seed": 1,
+        "evaluation_seconds_rounded": 1278
+      },
+      {
+        "rank": 1,
+        "story": "cafe_bomb",
+        "version": "suspense",
+        "seed": 0,
+        "evaluation_seconds_rounded": 1253
+      },
+      {
+        "rank": 1,
+        "story": "cafe_bomb",
+        "version": "suspense",
+        "seed": 2,
+        "evaluation_seconds_rounded": 1256
+      },
+      {
+        "rank": 1,
+        "story": "poisoned_wine",
+        "version": "surprise",
+        "seed": 1,
+        "evaluation_seconds_rounded": 1283
+      },
+      {
+        "rank": 1,
+        "story": "poisoned_wine",
+        "version": "suspense",
+        "seed": 0,
+        "evaluation_seconds_rounded": 1242
+      },
+      {
+        "rank": 1,
+        "story": "poisoned_wine",
+        "version": "suspense",
+        "seed": 2,
+        "evaluation_seconds_rounded": 1270
+      },
+      {
+        "rank": 1,
+        "story": "thin_ice",
+        "version": "surprise",
+        "seed": 1,
+        "evaluation_seconds_rounded": 1277
+      },
+      {
+        "rank": 1,
+        "story": "thin_ice",
+        "version": "suspense",
+        "seed": 0,
+        "evaluation_seconds_rounded": 1295
+      },
+      {
+        "rank": 1,
+        "story": "thin_ice",
+        "version": "suspense",
+        "seed": 2,
+        "evaluation_seconds_rounded": 1296
+      }
+    ],
+    "analysis": {
+      "started_at_utc": "2026-11-01T21:18:45.705641+00:00",
+      "ended_at_utc": "2026-11-01T21:18:49.414694+00:00",
+      "elapsed_seconds": 3.709,
+      "return_code": 0,
+      "command": "python -m src.analyze --config configs/experiment_qwen72b.yaml"
+    },
+    "task_elapsed_through_analysis_seconds": 15606.214
+  },
+  "validation": {
+    "completed_units": 18,
+    "expected_units": 18,
+    "all_result_schemas_and_probabilities_validated": true,
+    "sources_stories_and_original_configuration_unchanged": true,
+    "original_7b_result_hashes_unchanged": true,
+    "label_mass_mean_range": [
+      0.999828236328589,
+      0.999988276947726
+    ],
+    "rank_errors": {},
+    "report_file_count": 7,
+    "curve_images_verified": true,
+    "validated_at_utc": "2026-11-01T21:19:20.743815+00:00"
+  },
+  "artifact_sha256": {
+    "report/cafe_bomb.png": "0d98597b849170d221fde8356fa92ef6e80f404b5422edc21b920b6cdbbd6679",
+    "report/human_eval_template.csv": "8202d711c2e1ae48d75adcfacd4f1d8b2b44db75cba10569f6bb56781cf5c75d",
+    "report/pairs.csv": "ded0e84d68e85190faa39cfd7d23600d210b219ddd0802cae8b1ab5a7b4891c3",
+    "report/poisoned_wine.png": "62a2cb5c95538ffe86029fc964f19bc472106915205df4e480a481816cd7c26c",
+    "report/report.md": "93fe5530e1dba56b77173a21b444694535fdfd20b83af5ad3cd4fe5299ed6e69",
+    "report/summary.json": "74a72ec45b51d6ee080feb1a7f2e374f026082bf56166d9258a5025be8440375",
+    "report/thin_ice.png": "8834780d59b6c2f532d193aceb26835984ab8d67843c1d427cd77dca222ee24e",
+    "viewer/cafe_bomb/surprise_seed0.json": "2176ea1726783fcc4c81d247e0d7bba3ae91dcbca337a6fde74201b61efac7e1",
+    "viewer/cafe_bomb/surprise_seed1.json": "96953c78646e5f30c1296128d1bbd663af8bc164f99b725a248daac427b2f40d",
+    "viewer/cafe_bomb/surprise_seed2.json": "15a112677f124093bfcfdc300de995d7e0c70403c58ecf504b2e481c2d06d921",
+    "viewer/cafe_bomb/suspense_seed0.json": "1b6690bb6dd56f3175024f3ff82249e95ad1ed689c4e64537638e92d7c27e64e",
+    "viewer/cafe_bomb/suspense_seed1.json": "9581b0ee90439e942272f7b06671143db5ce5065ce0f3ebff0b26a4187de3c9d",
+    "viewer/cafe_bomb/suspense_seed2.json": "c0dc77b1ae98e9d7fe7ab4d897511a155b932fa9beb3f211e9bc1a63fc6c7740",
+    "viewer/poisoned_wine/surprise_seed0.json": "40790ddf14510ff9a8ed16c53cff72e1a32d40b9e9cf0149c5f4b881a66fa24f",
+    "viewer/poisoned_wine/surprise_seed1.json": "45ffe7dd4e6fcdda9cc74a6b1aa8c31671559fffb2ce02b6fe9b52fa6a0007f4",
+    "viewer/poisoned_wine/surprise_seed2.json": "e5f022a442052d82ee017749d26d94a40f265f7b1420f2b82cbc2ccc5d137d7a",
+    "viewer/poisoned_wine/suspense_seed0.json": "0c10402cc91604700071d5590581d7231a9909d27b57b0b61ffa3f7d30b8c048",
+    "viewer/poisoned_wine/suspense_seed1.json": "1ab935b859fc3026b9026b3d61606e7ce79cf54b11ac1a709380806a9bbd57b2",
+    "viewer/poisoned_wine/suspense_seed2.json": "e672b9114bd2256798f2bc4a2bf6cb38fdf62e7ee842d4e26d267202f70f9711",
+    "viewer/thin_ice/surprise_seed0.json": "158b528a3ee5a9aff1e835e1310106aac34430e85e593d4811c2c4ec4bc9c2ba",
+    "viewer/thin_ice/surprise_seed1.json": "5f7c647a39206c1fcf958c2a5f9146de728a924d010508c1c439103674daea20",
+    "viewer/thin_ice/surprise_seed2.json": "2082e00d874f5f8ddaa7e221207ef6a03f34715b29c9f2d5086adc8cb04a958b",
+    "viewer/thin_ice/suspense_seed0.json": "9041397742082e8a4b69b9ab96589c2888b2762b06e7260bf8c021db049ac817",
+    "viewer/thin_ice/suspense_seed1.json": "160563088e0cb78d258ebc42b65615984b255a474f1eac1840d927173a5798c2",
+    "viewer/thin_ice/suspense_seed2.json": "e68155277e20436862f2bc9149699c1b960c7c314f8891e3bc04078b9c313bac"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "story": "thin_ice",
+  "version": "suspense",
+  "seed": 0,
+  "shots": [
+    "s1_establish",
+    "s2_reveal",
+    "s3_skate",
+    "s4_center",
+    "s5_blades",
+    "s6_break"
+  ],
+  "reveal_index": 1,
+  "final_index": 5,
+  "viewer_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "modes": {
+    "video": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.14349629587614104,
+              "escape": 0.3124029654710555,
+              "harm": 0.5441007386528035
+            },
+            {
+              "calm": 0.8105950783091104,
+              "escape": 0.09872823245349613,
+              "harm": 0.09067668923739353
+            },
+            {
+              "calm": 0.03580299774203436,
+              "escape": 0.11851013825272222,
+              "harm": 0.8456868640052434
+            },
+            {
+              "calm": 0.1196190135545189,
+              "escape": 0.1771015064900644,
+              "harm": 0.7032794799554167
+            },
+            {
+              "calm": 0.2532937657169843,
+              "escape": 0.19141696441028755,
+              "harm": 0.5552892698727282
+            },
+            {
+              "calm": 0.3694954668903669,
+              "escape": 0.19857291179755696,
+              "harm": 0.4319316213120762
+            },
+            {
+              "calm": 0.017512310273992658,
+              "escape": 0.16335610320725585,
+              "harm": 0.8191315865187515
+            }
+          ],
+          "entropy": [
+            0.885854066414756,
+            0.5611381299972558,
+            0.4675987073144011,
+            0.7355894853090686,
+            0.9020034653628191,
+            0.9571075004277128,
+            0.482638315020715
+          ],
+          "surprise": [
+            null,
+            0.8344285743201413,
+            1.0820048317403612,
+            0.17532237726690028,
+            0.19993742516467625,
+            0.1696206131253239,
+            0.5244579861199212
+          ],
+          "suspense_rollout": [
+            0.1638710823719113,
+            0.15011393601134776,
+            0.28876866264241313,
+            0.24371365327703018,
+            0.2963360100908863,
+            0.2630515011788877,
+            null
+          ]
+        }
+      },
+      "imagined_next_shots": [
+        [
+          "I expect the next shot to reveal a vast expanse of ice, possibly with a lone figure braving the frozen landscape.",
+          "I expect the next shot to show a lone figure walking or standing on the frozen lake, taking in the serene winter landscape.",
+          "I expect the next shot to reveal a lone figure walking across the vast expanse of the frozen lake under a cloudy sky.",
+          "The next shot will likely show a vast, white landscape with someone standing cautiously on the frozen lake.",
+          "The next shot will likely reveal a person or people walking or skating across the icy surface of the frozen lake.",
+          "I expect the next shot to show a person or group walking cautiously across the frozen lake's icy surface.",
+          "I expect the next shot to show a person standing or moving cautiously across the frozen lake, perhaps testing the ice with their feet.",
+          "A wide shot of the desolate, ice-covered lake surrounded by bare trees under a cloudy sky."
+        ],
+        [
+          "I expect the next shot to possibly reveal more about why the person is holding their skates or introduce another character or element on the frozen lake.",
+          "The next shot might show the person reaching their destination or interacting with someone else on the ice.",
+          "I expect the next shot to reveal another person or element interacting with the individual walking across the ice, possibly joining them or indicating why they are holding their shoes.",
+          "I expect the next shot to show either someone joining the person on the ice or an action related to the skates he's carrying, such as him setting them down or beginning to put them on.",
+          "The next shot might show the person walking towards the edge of the frozen lake or sitting down, suggesting a moment of rest or contemplation in the serene environment.",
+          "I expect the next shot to show the man reaching his destination or interacting with someone or something off-screen.",
+          "The next shot might reveal another character joining the person on the ice or show them approaching something intriguing on the lake's surface.",
+          "The next shot might reveal more people or wildlife joining the person in the serene frozen landscape, adding to the story's context."
+        ],
+        [
+          "I expect the next shot to show a close-up of the thin ice cracking or someone approaching the danger sign, highlighting the perilous situation.",
+          "The next shot will likely show a close-up or reaction shot of the person realizing the danger of the thin ice.",
+          "I expect the next shot to show a close-up or a wider view of the person reacting to the danger of thin ice, possibly turning back or attempting to navigate away from the risky area.",
+          "I expect the next shot to either show the man realizing the danger of the thin ice or already in distress due to it.",
+          "The next shot will likely show the person from the earlier scene falling through the thin ice, highlighting the perilous situation despite the warning sign.",
+          "The next shot will likely show a close-up of the ice cracks as the person realizes the danger or perhaps their sudden fall through the thin ice.",
+          "The next shot might show the person from the previous scene approaching or becoming aware of the danger sign and cracked ice, leading to a moment of tension or decision-making.",
+          "The next shot will likely show the person from Shot 1 approaching or reacting to the \"DANGER - THIN ICE\" sign in a moment of realization or peril."
+        ],
+        [
+          "I expect the next shot to show either another person on the ice or a sudden shift in the scene, possibly involving someone noticing the danger sign or reacting to an unexpected event like the ice cracking.",
+          "The next shot might show a sudden shift or close-up, possibly indicating tension or danger related to the thin ice warning.",
+          "I expect the next shot to show a potential accident or a moment where someone encounters danger on the thin ice, given the ominous warning sign we saw earlier.",
+          "The next shot will likely show a close-up reaction or a sudden event, such as the ice beginning to crack, intensifying the tension after showcasing the dangerous conditions and joyful skating moments.",
+          "The next shot might reveal someone falling through the thin ice, considering the warning sign and the precarious situation on the frozen lake.",
+          "The next shot may depict a sudden cracking sound as one of the skaters notices the dangerous thin ice warning and tries to hurry back towards safety.",
+          "The next shot will likely depict an interaction or a collision between the two ice skaters, given the contrasting settings and warnings about the ice's stability.",
+          "The next shot will likely reveal a dramatic moment where someone encounters a perilous situation due to the thin ice warning."
+        ],
+        [
+          "The next shot will likely show someone falling through the thin ice or a rescue effort taking place.",
+          "The next shot may depict a sudden event like someone falling through thin ice or showing a group of people cautiously testing the ice's stability near the \"Danger\" sign.",
+          "I expect the next shot to show either a continuation of someone ice skating or an abrupt, dramatic change due to the thin ice warning, perhaps showing someone falling through.",
+          "Given the previous shots, I expect the next scene to show either more ice skaters enjoying the frozen lake or a potential mishap due to the thin ice warning, creating a narrative tension.",
+          "I expect the next shot to reveal the consequences of someone ignoring the thin ice warning, possibly showing them falling through or cautiously navigating around the danger.",
+          "I expect the next shot to show someone falling through thin ice, as suggested by the \"DANGER\" warning signs and the potentially risky environment depicted earlier.",
+          "The next shot will likely show a sudden cracking or breaking of the ice beneath one of the skaters, leading to a dramatic moment or fall.",
+          "I expect the next shot to reveal either the danger of the thin ice impacting one of the characters or introduce a new element that adds tension or changes the situation on the lake."
+        ],
+        [
+          "I expect the next shot to show a close-up reaction or possibly a person interacting with the ice, highlighting their response to the cracking sound.",
+          "Given the previous shots focusing on ice skating and warnings about thin ice, I expect the next shot to possibly show someone experiencing trouble on the ice or taking extra caution due to the danger sign.",
+          "The next shot might depict a sudden event, like someone falling through the ice or reacting to the danger, given the earlier \"DANGER THIN ICE\" sign and the serene yet precarious setting.",
+          "I expect the next shot to show someone falling or experiencing difficulty on the thin ice, potentially following the danger warning sign's implications.",
+          "I expect the next shot to depict someone falling on the ice, possibly due to the thin ice warning or a misstep while skating.",
+          "Given the focus on ice skating and the potential danger highlighted by the \"THIN ICE\" sign, I expect the next shot might depict someone encountering a problem with the ice, perhaps hearing a cracking sound or looking concerned about the ice's stability",
+          "I expect the next shot to depict someone slipping or falling on the ice, possibly due to its thinness or the snowy conditions affecting traction.",
+          "The next shot will likely depict someone falling or losing balance while ice skating on the frozen lake."
+        ]
+      ],
+      "direct_rating": [
+        null,
+        1.6536904626118485,
+        3.51865654415451,
+        3.1997909584315494,
+        2.789588626474142,
+        2.6635423693805933,
+        4.506066180325433
+      ]
+    },
+    "text": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.14349629587614104,
+              "escape": 0.3124029654710555,
+              "harm": 0.5441007386528035
+            },
+            {
+              "calm": 0.522974676295667,
+              "escape": 0.1953571673799748,
+              "harm": 0.2816681563243582
+            },
+            {
+              "calm": 8.095339910329628e-05,
+              "escape": 0.004794679580068576,
+              "harm": 0.9951243670208282
+            },
+            {
+              "calm": 0.0003382930035965529,
+              "escape": 0.009793241582576894,
+              "harm": 0.9898684654138266
+            },
+            {
+              "calm": 0.00020743754723386875,
+              "escape": 0.00499445509893062,
+              "harm": 0.9947981073538356
+            },
+            {
+              "calm": 0.0006119944580706609,
+              "escape": 0.006752694982889064,
+              "harm": 0.9926353105590403
+            },
+            {
+              "calm": 1.0314381574480043e-05,
+              "escape": 0.004814283747690015,
+              "harm": 0.9951754018707355
+            }
+          ],
+          "entropy": [
+            0.885854066414756,
+            0.9237911832187876,
+            0.028427882620308487,
+            0.05287369253143688,
+            0.030415917559160007,
+            0.041519862293571096,
+            0.027872614949526475
+          ],
+          "surprise": [
+            null,
+            0.47599834067376817,
+            0.904848977334054,
+            0.007257847302571401,
+            0.006880904339022724,
+            0.0028165162451554626,
+            0.003251387535029891
+          ]
+        }
+      },
+      "direct_rating": [
+        null,
+        1.3816908368272607,
+        3.8279819940805453,
+        3.3476235632994644,
+        3.2898971218737643,
+        3.181300621745322,
+        4.889059038777873
+      ]
+    }
+  },
+  "probes": {
+    "crack_visible": {
+      "question": "Is there a visible crack in the ice or a thin-ice warning sign in this shot?",
+      "expected_shots": [
+        "s2_reveal"
+      ],
+      "p_yes": [
+        5.119097204442369e-05,
+        0.9956440329551697,
+        2.7401336410548538e-05,
+        0.0005527787725441158,
+        0.0002496920569683425,
+        0.005585422972217202
+      ]
+    },
+    "fall_visible": {
+      "question": "Is a person falling through the ice into the water in this shot?",
+      "expected_shots": [
+        "s6_break"
+      ],
+      "p_yes": [
+        0.00035766736255027354,
+        6.008365198795218e-05,
+        0.00010493920126464218,
+        0.003197265905328095,
+        0.0011008705478161573,
+        0.9981789588928223
+      ]
+    }
+  },
+  "label_mass_mean": 0.9998796858766057,
+  "label_mass_min": 0.9995100498199463
+}

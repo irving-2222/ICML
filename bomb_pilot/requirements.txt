@@ -1,0 +1,15 @@
+# PyTorch 请按服务器 CUDA 版本单独安装（A100 建议 CUDA 12.x 对应的 torch>=2.4）
+diffusers>=0.35.0        # Wan2.2 需要 0.35+；只用 Wan2.1 时 0.33+ 即可
+transformers>=4.51.0     # Qwen2.5-VL
+accelerate>=1.0.0
+huggingface_hub
+safetensors
+sentencepiece
+protobuf
+ftfy                     # Wan 的文本预处理需要
+imageio[ffmpeg]
+numpy
+pillow
+pyyaml
+matplotlib
+# 可选：flash-attn（装好后在配置里把 attn_implementation 改成 flash_attention_2）

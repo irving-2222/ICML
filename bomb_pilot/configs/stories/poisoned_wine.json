@@ -1,0 +1,70 @@
+{
+  "id": "poisoned_wine",
+  "title": "The Last Toast",
+  "intro": "You are about to watch a short film, shot by shot. It takes place during a dinner at an old mansion.",
+  "style": "Cinematic film still, 35mm film, dim candlelight, moody shadows, shallow depth of field, realistic, high detail.",
+  "characters": {
+    "host": "an elegant older woman with silver hair in a black dress",
+    "guest": "a young man with brown hair in a white shirt"
+  },
+  "shots": {
+    "s1_establish": {
+      "prompt": "Wide shot of a candlelit dining room in an old mansion, a long table with silverware. {host} and {guest} sit across from each other, smiling and talking.",
+      "description": "Wide shot of a candlelit dining room. A silver-haired woman in black and a young man in a white shirt sit at the table, smiling and talking."
+    },
+    "s2_reveal": {
+      "prompt": "Close-up in a dim kitchen: {host}'s hand secretly pours clear liquid from a small glass vial with a skull and crossbones label into a crystal glass of red wine.",
+      "description": "Close-up in the kitchen: the host secretly pours liquid from a small vial with a skull label into a glass of wine."
+    },
+    "s2_filler": {
+      "prompt": "Close-up in a dim kitchen: {host}'s hand pours red wine from a dark glass bottle into a crystal glass.",
+      "description": "Close-up in the kitchen: the host pours red wine from a bottle into a glass."
+    },
+    "s3_serve": {
+      "prompt": "Medium shot of {host} walking into the candlelit dining room and placing a crystal glass of red wine in front of {guest}, smiling warmly.",
+      "description": "Medium shot: the host places the glass of wine in front of the young man, smiling warmly."
+    },
+    "s4_toast": {
+      "prompt": "Medium shot of {guest} raising a crystal glass of red wine for a toast, smiling and talking, candlelight on his face.",
+      "description": "Medium shot: the young man raises the glass for a toast, smiling."
+    },
+    "s5_drink": {
+      "prompt": "Extreme close-up of {guest}'s lips touching the rim of a crystal glass and slowly drinking red wine.",
+      "description": "Extreme close-up: the young man slowly drinks the wine."
+    },
+    "s6_collapse": {
+      "prompt": "Medium shot of {guest} suddenly clutching his throat, gasping, and collapsing onto the dinner table, knocking over candles and glasses.",
+      "description": "The young man suddenly clutches his throat and collapses onto the table."
+    }
+  },
+  "versions": {
+    "surprise": ["s1_establish", "s2_filler", "s3_serve", "s4_toast", "s5_drink", "s6_collapse"],
+    "suspense": ["s1_establish", "s2_reveal", "s3_serve", "s4_toast", "s5_drink", "s6_collapse"]
+  },
+  "reveal_index": 1,
+  "final_index": 5,
+  "questions": [
+    {
+      "id": "ending",
+      "text": "Based only on what you have seen so far, how do you think this dinner will end?",
+      "options": {
+        "calm": "The dinner ends pleasantly and nothing bad happens.",
+        "escape": "Something sinister is attempted, but the young man ends up unharmed.",
+        "harm": "The young man is harmed."
+      },
+      "harm_option": "harm"
+    }
+  ],
+  "probe_facts": [
+    {
+      "id": "poison_visible",
+      "question": "Is someone pouring liquid from a small vial labeled as poison in this shot?",
+      "expected_shots": ["s2_reveal"]
+    },
+    {
+      "id": "collapse_visible",
+      "question": "Is a person collapsing or choking in this shot?",
+      "expected_shots": ["s6_collapse"]
+    }
+  ]
+}

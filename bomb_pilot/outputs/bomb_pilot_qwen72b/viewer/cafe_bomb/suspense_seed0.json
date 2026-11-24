@@ -1,0 +1,261 @@
+{
+  "story": "cafe_bomb",
+  "version": "suspense",
+  "seed": 0,
+  "shots": [
+    "s1_establish",
+    "s2_reveal",
+    "s3_woman",
+    "s4_man",
+    "s5_clock",
+    "s6_explosion"
+  ],
+  "reveal_index": 1,
+  "final_index": 5,
+  "viewer_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "modes": {
+    "video": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.9972266204958813,
+              "escape": 0.0014198212095188655,
+              "harm": 0.0013535582945998024
+            },
+            {
+              "calm": 0.9986214610734572,
+              "escape": 0.0005884371676471445,
+              "harm": 0.0007901017588957176
+            },
+            {
+              "calm": 0.012006251018943074,
+              "escape": 0.22884853193705837,
+              "harm": 0.7591452170439985
+            },
+            {
+              "calm": 0.027626643427279256,
+              "escape": 0.25653554006425905,
+              "harm": 0.7158378165084617
+            },
+            {
+              "calm": 0.05851488223425505,
+              "escape": 0.30549684169303887,
+              "harm": 0.6359882760727061
+            },
+            {
+              "calm": 0.05878180966512694,
+              "escape": 0.30479845470979405,
+              "harm": 0.636419735625079
+            },
+            {
+              "calm": 0.00766195851558276,
+              "escape": 0.24283815854813448,
+              "harm": 0.7494998829362828
+            }
+          ],
+          "entropy": [
+            0.01913313179665186,
+            0.010375252772386902,
+            0.5459333327553331,
+            0.625762731903836,
+            0.7429267561938676,
+            0.7430389186322376,
+            0.5435458949709796
+          ],
+          "surprise": [
+            null,
+            0.0017187969425033413,
+            1.2651540319084214,
+            0.053722416356410285,
+            0.09862677862316341,
+            0.0008632218585343371,
+            0.13870629833542406
+          ],
+          "suspense_rollout": [
+            0.0027655575091423976,
+            0.001673019760474062,
+            0.3855540082843797,
+            0.1926722555094821,
+            0.28082536584765483,
+            0.3771996235749335,
+            null
+          ]
+        }
+      },
+      "imagined_next_shots": [
+        [
+          "The next shot will likely introduce a character entering or sitting inside the cozy, warmly lit cafe.",
+          "I expect the next shot to introduce a character entering the cozy and warmly lit small cafe.",
+          "I expect the next shot to introduce a main character entering or already present within the cozy and charming atmosphere of the cafe.",
+          "I expect the next shot to show the exterior or interior of a quaint, cozy small cafe with warm lighting and patrons enjoying their beverages.",
+          "I expect the next shot to introduce us to the interior of the cozy cafe or a character walking into it.",
+          "The next shot likely shows a cozy corner of the small cafe with perhaps a few patrons enjoying their drinks and conversations.",
+          "I expect the next shot to introduce the main character or setting inside the cozy ambiance of the small cafe.",
+          "The next shot will likely introduce the main character entering or already inside the cozy and bustling café."
+        ],
+        [
+          "The next shot might show the couple continuing their conversation with more expressive gestures or perhaps a shift in their facial expressions to indicate a change in the topic's tone.",
+          "The next shot may show either the man or woman responding with a gesture or spoken line that continues their conversation.",
+          "I expect the next shot to possibly reveal another character entering the scene or perhaps a shift in the conversation's dynamics between the two characters at the table.",
+          "I expect the next shot to reveal more context about their conversation or introduce another character joining them at the table.",
+          "The next shot might show a close-up of either the woman or the man's face, capturing their expressions in more detail as they continue their conversation.",
+          "The next shot might focus on the woman's reaction or change in expression as she listens or responds to the man.",
+          "I expect the next shot to show a closer view of either the man or woman, perhaps highlighting their facial expressions or reactions during the conversation.",
+          "I expect the next shot to show either another person entering the cafe or a closer view of the conversation between the two individuals to reveal more details about their interaction."
+        ],
+        [
+          "I expect the next shot to show a frantic or intense reaction from either the man or the woman as they become aware of the ticking bomb under the table.",
+          "The next shot might show a sudden reaction or movement from the man and woman at the table as they discover the ticking bomb.",
+          "The next shot will likely reveal someone reacting with urgency or fear upon discovering the ticking bomb under the table.",
+          "The man or the woman might notice the bomb under the table and react with shock and urgency.",
+          "The next shot will likely show the man and woman reacting with shock or fear to the bomb discovered under their table.",
+          "The next shot will likely show the two people from Shot 1 realizing the danger of the bomb under their table and reacting with shock or panic.",
+          "The next shot will likely show the man and woman discovering the bomb under their table and reacting with shock and urgency.",
+          "The next shot might reveal someone discovering or reacting to the bomb under the table, heightening the tension."
+        ],
+        [
+          "The next shot will likely reveal the man's reaction to the impending danger, possibly showing him noticing or dealing with the bomb under the table.",
+          "The next shot will likely reveal the man's reaction to the woman's laughter or perhaps his attempt to defuse or deal with the bomb under the table.",
+          "The next shot will likely reveal a sense of urgency or tension as someone realizes the bomb under the table is counting down.",
+          "The next shot might show the man reacting in shock or fear to the bomb under the table.",
+          "The next shot will likely reveal a tense or dramatic reaction from the man or another character discovering the bomb's existence.",
+          "The next shot might show the man noticing the bomb's timer and reacting with urgency or fear.",
+          "I expect the next shot to reveal how the bomb under the table will disrupt or conclude the conversation between the couple.",
+          "The next shot will likely reveal a reaction from either the man or another character acknowledging the ticking bomb under the table."
+        ],
+        [
+          "The next shot will likely show the bomb's timer reaching zero and the tension leading to its detonation or a critical action by one of the characters.",
+          "The next shot will likely reveal either an attempt to defuse or escape the bomb, emphasizing urgency and tension.",
+          "The next shot might reveal someone entering the café with urgency or notice the bomb under the table, escalating the tension.",
+          "The next shot will likely show either someone discovering the bomb under the table or a reaction from the characters, possibly including a moment of realization or alarm.",
+          "The next shot might show a person's hand cutting the wires on the bomb, as the tension builds and someone attempts to diffuse the situation before it reaches its climax.",
+          "The next shot may show someone discovering the bomb and reacting with urgency or attempting to defuse it.",
+          "The next shot might reveal a person discovering or reacting to the bomb under the table, potentially escalating the tension.",
+          "The next shot will likely reveal someone's reaction to the bomb under the table or depict an attempt to address the ticking timer."
+        ],
+        [
+          "I expect the next shot to reveal the characters reacting with urgency or panic as they become aware of the ticking bomb's countdown nearing its end.",
+          "The next shot will likely reveal the couple's reaction as they discover or interact with the bomb situation under their table, escalating the tension.",
+          "The next shot will likely reveal a tense moment or reaction as the characters become aware of the bomb's imminent detonation.",
+          "The next shot will likely reveal a frantic or tense reaction from either the man or the woman as they discover the ticking bomb under their table.",
+          "I expect the next shot to reveal either someone trying to defuse the bomb or to show the reactions of the people in the cafe as they realize the danger, potentially with the time left on the clock becoming a crucial element in their actions.",
+          "The next shot will likely reveal someone rushing into the cafe, possibly to resolve the situation with the bomb and the ticking clock.",
+          "The next shot will likely reveal the bomb's timer reaching zero and showing the consequences, possibly shifting back to the characters' reactions or their attempts to address the situation.",
+          "The next shot will likely reveal how the characters react when they notice the bomb's timer running out, possibly showing them trying to escape or figure out how to disable it."
+        ]
+      ],
+      "direct_rating": [
+        null,
+        1.0433329905322353,
+        4.418899528292968,
+        4.218519730347907,
+        4.139120362124231,
+        4.033362664515153,
+        4.953377001700574
+      ]
+    },
+    "text": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.9972266204958813,
+              "escape": 0.0014198212095188655,
+              "harm": 0.0013535582945998024
+            },
+            {
+              "calm": 0.999912173961101,
+              "escape": 3.943820759111923e-05,
+              "harm": 4.8387831307842845e-05
+            },
+            {
+              "calm": 0.0007486494983740883,
+              "escape": 0.16476146250334966,
+              "harm": 0.8344898879982763
+            },
+            {
+              "calm": 0.00080579824857371,
+              "escape": 0.12689254135931588,
+              "harm": 0.8723016603921104
+            },
+            {
+              "calm": 0.0013424363860589249,
+              "escape": 0.1732843168087612,
+              "harm": 0.8253732468051799
+            },
+            {
+              "calm": 0.00041600848038289855,
+              "escape": 0.1517495435061787,
+              "harm": 0.8478344480134384
+            },
+            {
+              "calm": 2.8849082698980088e-05,
+              "escape": 0.0008294412955970141,
+              "harm": 0.999141709621704
+            }
+          ],
+          "entropy": [
+            0.01913313179665186,
+            0.0008816125391500192,
+            0.4127784995641952,
+            0.3521468912961389,
+            0.4287405766136183,
+            0.390781963594208,
+            0.0064118883434528505
+          ],
+          "surprise": [
+            null,
+            0.003289547778162579,
+            1.3121561306131873,
+            0.053514377378007655,
+            0.06599061154155468,
+            0.03113053628795866,
+            0.2137075444598149
+          ]
+        }
+      },
+      "direct_rating": [
+        null,
+        1.0040825194476852,
+        4.650242185078575,
+        4.042834642230261,
+        4.062203211232486,
+        4.034479761413593,
+        4.98177198706253
+      ]
+    }
+  },
+  "probes": {
+    "bomb_visible": {
+      "question": "Is there a bomb or explosive device visible in this shot?",
+      "expected_shots": [
+        "s2_reveal"
+      ],
+      "p_yes": [
+        2.3344426836047205e-06,
+        0.9932558834552765,
+        1.671216352860938e-06,
+        7.67748773000676e-07,
+        3.5912806879423442e-06,
+        0.010820434195920825
+      ]
+    },
+    "explosion_visible": {
+      "question": "Is there an explosion visible in this shot?",
+      "expected_shots": [
+        "s6_explosion"
+      ],
+      "p_yes": [
+        2.3971663267730037e-06,
+        0.0023276704596355557,
+        6.061003645640994e-07,
+        3.295715167439539e-07,
+        1.5175374414866383e-06,
+        0.9980582892894745
+      ]
+    }
+  },
+  "label_mass_mean": 0.9999313698158608,
+  "label_mass_min": 0.9996836185455322
+}

@@ -1,0 +1,103 @@
+# =============================================================
+# 炸弹实验（Bomb Pilot）配置
+# 目的：验证"VLM 观众"能否感知到信息结构不同带来的悬念/惊喜差异
+# =============================================================
+
+output_dir: outputs/bomb_pilot          # 正式实验输出目录（相对 bomb_pilot/）
+dry_run_output_dir: outputs/dry_run     # --dry_run 时的输出目录
+
+# 故事列表：每个故事有 surprise / suspense 两个版本，只差一个镜头
+stories:
+  - configs/stories/cafe_bomb.json
+  - configs/stories/poisoned_wine.json
+  - configs/stories/thin_ice.json
+
+# 每个镜头用几个 seed 生成（相当于拍几条 take）。
+# 同一个 seed 下，两个版本共享"完全相同"的公共镜头文件 -> 严格对照。
+seeds: [0, 1, 2]
+
+# -------------------------------------------------------------
+# 视频生成（本地部署 Wan 系列，通过 diffusers 调用）
+# -------------------------------------------------------------
+generator:
+  preset: wan21_14b        # 可选: wan21_14b（默认，60G 卡稳）| wan22_a14b（质量更好，需 offload）| wan22_ti2v_5b（快，适合调试）
+  max_sequence_length: 512
+  negative_prompt: >-
+    blurry, low quality, distorted, deformed, ugly, watermark, text, subtitles,
+    static, frozen frame, overexposed, worst quality, jpeg artifacts,
+    extra fingers, malformed limbs, cluttered background
+
+  presets:
+    wan21_14b:
+      model_id: Wan-AI/Wan2.1-T2V-14B-Diffusers
+      has_transformer_2: false
+      height: 480
+      width: 832
+      num_frames: 81           # 81 帧 @16fps ≈ 5 秒
+      fps: 16
+      num_inference_steps: 40
+      flow_shift: 3.0          # 480p 推荐 3.0，720p 推荐 5.0
+      call_kwargs: {guidance_scale: 5.0}
+      precompute_text_embeds: true   # 先算好文本向量再释放 T5，省约 11GB 显存
+      cpu_offload: auto              # auto: 显存 < min_gpu_mem_gb_no_offload 时自动开启
+      min_gpu_mem_gb_no_offload: 50
+
+    wan22_a14b:
+      model_id: Wan-AI/Wan2.2-T2V-A14B-Diffusers
+      has_transformer_2: true  # MoE：高噪声专家 + 低噪声专家，两个 14B
+      height: 480
+      width: 832
+      num_frames: 81
+      fps: 16
+      num_inference_steps: 40
+      call_kwargs: {guidance_scale: 4.0, guidance_scale_2: 3.0}
+      precompute_text_embeds: true
+      cpu_offload: auto
+      min_gpu_mem_gb_no_offload: 79  # 两个专家权重约 56GB，60G 卡需要 offload（会占较多 CPU 内存）
+
+    wan22_ti2v_5b:
+      model_id: Wan-AI/Wan2.2-TI2V-5B-Diffusers
+      has_transformer_2: false
+      height: 704
+      width: 1280
+      num_frames: 121          # 121 帧 @24fps ≈ 5 秒
+      fps: 24
+      num_inference_steps: 50
+      call_kwargs: {guidance_scale: 5.0}
+      precompute_text_embeds: true
+      cpu_offload: auto
+      min_gpu_mem_gb_no_offload: 30
+
+# -------------------------------------------------------------
+# 观众 Agent（本地 VLM）
+# -------------------------------------------------------------
+viewer:
+  model_id: Qwen/Qwen2.5-VL-7B-Instruct   # 更强可换 Qwen/Qwen2.5-VL-72B-Instruct（需 4 卡，见 README）
+  device_map: auto
+  attn_implementation: sdpa               # 装了 flash-attn 可改成 flash_attention_2
+  processor_kwargs: {}
+  frames_per_shot: 6        # 每个镜头均匀抽几帧给观众看
+  max_side: 448             # 抽帧后长边缩放到多少像素（控制 token 数）
+
+  # video: 观众看真实视频；text: 观众只读分镜文字（"计划层"对照，用来测"传达失败"）
+  modes: [video, text]
+
+  # 选项顺序去偏：把 A/B/C 轮换 n 次取平均，抵消模型偏爱某个字母
+  n_option_permutations: 3
+
+  # 悬念（前瞻）：让观众想象 K 种"下一个镜头"，看信念会被扰动多大
+  rollout:
+    enabled: true
+    num_samples: 8
+    max_new_tokens: 48
+    temperature: 1.0
+
+  direct_rating: true       # 对照组：直接问"你现在有多紧张(1-5)"
+  probe_facts: true         # 传达检查：关键信息（如炸弹）在画面里是否真的可见
+
+# -------------------------------------------------------------
+# 分析
+# -------------------------------------------------------------
+analysis:
+  suspense_version: suspense
+  surprise_version: surprise

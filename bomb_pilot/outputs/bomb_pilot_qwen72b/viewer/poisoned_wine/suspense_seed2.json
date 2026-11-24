@@ -1,0 +1,261 @@
+{
+  "story": "poisoned_wine",
+  "version": "suspense",
+  "seed": 2,
+  "shots": [
+    "s1_establish",
+    "s2_reveal",
+    "s3_serve",
+    "s4_toast",
+    "s5_drink",
+    "s6_collapse"
+  ],
+  "reveal_index": 1,
+  "final_index": 5,
+  "viewer_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "modes": {
+    "video": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.11297920012165506,
+              "escape": 0.5612524857670451,
+              "harm": 0.3257683141112998
+            },
+            {
+              "calm": 0.11445049998387943,
+              "escape": 0.3356881456359632,
+              "harm": 0.5498613543801574
+            },
+            {
+              "calm": 0.003600813671478654,
+              "escape": 0.1658508624101694,
+              "harm": 0.830548323918352
+            },
+            {
+              "calm": 0.0068873333006226976,
+              "escape": 0.20388770565347672,
+              "harm": 0.7892249610459006
+            },
+            {
+              "calm": 0.010438658009942366,
+              "escape": 0.19074884738859482,
+              "harm": 0.7988124946014629
+            },
+            {
+              "calm": 0.008796395848644471,
+              "escape": 0.2136808910017825,
+              "harm": 0.777522713149573
+            },
+            {
+              "calm": 0.0008304834489368989,
+              "escape": 0.012483825626138177,
+              "harm": 0.986685690924925
+            }
+          ],
+          "entropy": [
+            0.8518922069614655,
+            0.8587000967724949,
+            0.43003905754884236,
+            0.4963694695603738,
+            0.49434398623532944,
+            0.5161623612328606,
+            0.06720927408284477
+          ],
+          "surprise": [
+            null,
+            0.3179608890398233,
+            0.34629110672613517,
+            0.05626031438124906,
+            0.016648192195392052,
+            0.03133417373336668,
+            0.290332337413495
+          ],
+          "suspense_rollout": [
+            0.27091078104965083,
+            0.19586637776074614,
+            0.2068110123599536,
+            0.10907810485057745,
+            0.18031783086105255,
+            0.21536481281891795,
+            null
+          ]
+        }
+      },
+      "imagined_next_shots": [
+        [
+          "The next shot will likely reveal the grand dining room filled with an elegant table setting and the characters gathering around it.",
+          "The next shot likely reveals a grand, dimly lit dining room with elegant but aged decor, setting the stage for an ominous or mysterious gathering.",
+          "I expect the next shot to introduce characters sitting around a grand, dimly lit dining table in the mansion.",
+          "I expect the next shot to show an opulent dining room set with an array of antique furnishings and perhaps a family gathered around the table.",
+          "The next shot might reveal an opulent dining room with antique furnishings and the shadowy figures of people gathering for a tense or mysterious dinner.",
+          "The next shot will likely reveal an opulent dining room with characters gathered around a large, antique table.",
+          "I expect the next shot to reveal the dining room with a large, ornate table set for an eerie meal, possibly with candles flickering in the dimly lit space.",
+          "I expect the next shot to reveal an opulent dining room with elegant table settings and dim, atmospheric lighting that highlights the aged grandeur of the mansion."
+        ],
+        [
+          "I expect the next shot to reveal either a conversation between the two characters or an interaction with another unseen presence in the room, possibly hinting at a hidden tension or mystery within the old mansion.",
+          "I expect the next shot to reveal more details about the setting or introduce another character to interact with the existing two.",
+          "I expect the next shot to reveal more details about their conversation or introduce another character entering the room.",
+          "The next shot might focus on one of the characters speaking or reacting, potentially revealing more about their relationship or the tense atmosphere between them.",
+          "I expect the next shot to show either the characters beginning to interact through dialogue or an external event that interrupts the quiet moment.",
+          "The next shot might focus on the characters' expressions or perhaps an unexpected element intruding on the scene, like another person entering or a dramatic sound off-camera.",
+          "The next shot might show a close-up of either character's face or hands as they begin to engage more deeply in conversation or react to something significant.",
+          "The next shot might show a close-up of either character's face as they react or speak, potentially revealing their emotions or intentions in more detail."
+        ],
+        [
+          "The next shot will likely reveal the person pouring the drink, possibly the older woman or the young man from the dinner table, as they prepare to serve it.",
+          "The next shot might reveal the reaction or interaction between the two individuals as the person holding the drink approaches and places it on the table, possibly heightening the tension or mystery between them.",
+          "The next shot will likely reveal someone taking a sip from the glass filled with the ominous red liquid.",
+          "The next shot might show the person who poured the drink offering it to someone, possibly the man or woman at the dining table, creating a tense moment.",
+          "The next shot will likely reveal the person who poured the ominous drink, possibly connecting them to the tense dinner conversation, adding to the intrigue.",
+          "The next shot will likely show the elderly woman or the man from the dinner scene drinking the ominously labeled poison-filled glass.",
+          "The next shot will likely reveal someone at the table accepting or reacting to the glass of the mysterious red liquid being served.",
+          "The next shot will likely show either the older woman or the young man receiving the glass of red liquid, setting up a pivotal interaction or reaction between them."
+        ],
+        [
+          "The next shot will likely show the man drinking from the glass as tension builds over the nature of the liquid he's consuming.",
+          "I expect the next shot to reveal the elderly woman joining the young man at the table, potentially engaging in conversation or raising their glasses together.",
+          "The man and the woman share a toast, their glasses clinking together in the dim candlelight.",
+          "The woman takes her seat and they begin their meal together under the candlelight, possibly sharing a conversation or toast.",
+          "The woman is likely to sit down and they will continue their interaction, possibly with a toast or conversation.",
+          "The woman will likely take a seat and they may continue their interaction with a toast or conversation involving the glasses on the table.",
+          "The next shot will likely focus on the younger man taking the drink offered by the older woman, possibly with a reaction that hints at the true nature or effects of the liquid.",
+          "I expect the next shot to reveal a tense interaction or pivotal moment between the elderly woman and the young man, possibly involving the glass she just handed him."
+        ],
+        [
+          "The next shot might reveal the effects of drinking the ominous red liquid on the young man's face as he begins to feel its impact.",
+          "The next shot might show the older woman reacting to the young man drinking or an unexpected turn of events related to the suspicious bottle with the skull and crossbones label.",
+          "The next shot will likely depict the man reacting to the taste of the drink, possibly showing signs of distress if it was indeed spiked or realizing something significant.",
+          "I expect the next shot to reveal a significant reaction from either the woman or another character, possibly after noticing the man drinking what might be poisoned wine.",
+          "The next shot might reveal the woman's reaction or the aftermath of the man drinking the suspiciously poured liquid.",
+          "The next shot might show a reaction from the woman, highlighting her response to the man's toast or revealing a pivotal interaction between the two.",
+          "I expect the next shot to show a reaction from the woman, possibly concerned or shocked as she sees the man drink the suspiciously poured beverage.",
+          "The next shot might reveal a tense or dramatic reaction after the young man takes a sip from the glass, possibly indicating something is amiss with the drink."
+        ],
+        [
+          "The next shot might reveal more characters or details about the setting, possibly showing a reaction or the aftermath of the man drinking the mysterious red liquid.",
+          "I expect the next shot to reveal a somber or tense atmosphere, possibly showing the man reacting to the effects of the seemingly poisonous drink or another character entering with a crucial piece of information.",
+          "The next shot will likely reveal the woman's reaction to the man's behavior or show the aftermath of drinking the contents of the wineglass.",
+          "The next shot might show the older woman reacting to the younger man's drinking, possibly with concern or intrigue.",
+          "I expect the next shot to reveal a tense or unexpected reaction after the young man takes another sip of the drink.",
+          "The next shot might reveal the young man reacting to the effects of the drink, possibly showing signs of poisoning or distress.",
+          "I expect the next shot to reveal a significant reaction or consequence following the drink being consumed, possibly highlighting the true nature of the poison-laden beverage.",
+          "The next shot might reveal another character's reaction or a significant object that adds tension to the story."
+        ]
+      ],
+      "direct_rating": [
+        null,
+        2.343389159766957,
+        3.46949243479321,
+        3.1062069967156276,
+        3.4496501421090215,
+        3.351619553868659,
+        4.484427085767038
+      ]
+    },
+    "text": {
+      "questions": {
+        "ending": {
+          "beliefs": [
+            {
+              "calm": 0.11297920012165506,
+              "escape": 0.5612524857670451,
+              "harm": 0.3257683141112998
+            },
+            {
+              "calm": 0.6379757197471726,
+              "escape": 0.2577834592760244,
+              "harm": 0.10424082097680294
+            },
+            {
+              "calm": 8.91094391897067e-06,
+              "escape": 0.035753750024600156,
+              "harm": 0.9642373390314809
+            },
+            {
+              "calm": 4.978082533277514e-06,
+              "escape": 0.023752373236556025,
+              "harm": 0.9762426486809107
+            },
+            {
+              "calm": 2.9945463550106955e-06,
+              "escape": 0.009736330965248171,
+              "harm": 0.9902606744883968
+            },
+            {
+              "calm": 2.0972502153866245e-07,
+              "escape": 6.118215732749336e-05,
+              "harm": 0.999938608117651
+            },
+            {
+              "calm": 7.595297375479013e-09,
+              "escape": 4.0765147283784975e-07,
+              "harm": 0.9999995847532297
+            }
+          ],
+          "entropy": [
+            0.8518922069614655,
+            0.7936336158241749,
+            0.14046661917479836,
+            0.10228292118849343,
+            0.049906098813073174,
+            0.0005991041830851687,
+            5.966584146075985e-06
+          ],
+          "surprise": [
+            null,
+            0.645592151340743,
+            1.0935688601963065,
+            0.016975291457135444,
+            0.019823079791617935,
+            0.013684696253219787,
+            8.609141365315969e-05
+          ]
+        }
+      },
+      "direct_rating": [
+        null,
+        1.5094488458560136,
+        3.916941982250332,
+        3.9831054649835647,
+        3.982798246811324,
+        4.221271780064063,
+        4.984075704876402
+      ]
+    }
+  },
+  "probes": {
+    "poison_visible": {
+      "question": "Is someone pouring liquid from a small vial labeled as poison in this shot?",
+      "expected_shots": [
+        "s2_reveal"
+      ],
+      "p_yes": [
+        5.751380103902193e-05,
+        0.63398078083992,
+        0.00016330458311131224,
+        4.14102728996113e-06,
+        7.280318584435008e-06,
+        1.541222547984944e-05
+      ]
+    },
+    "collapse_visible": {
+      "question": "Is a person collapsing or choking in this shot?",
+      "expected_shots": [
+        "s6_collapse"
+      ],
+      "p_yes": [
+        0.002062975079752505,
+        4.478485379877384e-06,
+        0.00011614578033913858,
+        0.009782215114682913,
+        0.0005570958601310849,
+        0.9907179176807404
+      ]
+    }
+  },
+  "label_mass_mean": 0.9999125140744287,
+  "label_mass_min": 0.9993922710418701
+}

@@ -1,0 +1,69 @@
+{
+  "id": "thin_ice",
+  "title": "Thin Ice",
+  "intro": "You are about to watch a short film, shot by shot. It takes place on a frozen lake in winter.",
+  "style": "Cinematic film still, 35mm film, cold blue winter light, snowy landscape, realistic, high detail.",
+  "characters": {
+    "man": "a young man in a bright yellow jacket and a red wool hat"
+  },
+  "shots": {
+    "s1_establish": {
+      "prompt": "Wide establishing shot of a vast frozen lake surrounded by snowy pine forest. {man} walks onto the ice carrying ice skates, smiling.",
+      "description": "Wide shot of a frozen lake surrounded by snowy forest. A young man in a yellow jacket walks onto the ice carrying skates, smiling."
+    },
+    "s2_reveal": {
+      "prompt": "Low close-up of the ice surface of a frozen lake: a long dark crack spreading across thin ice with dark water seeping through, and a small red warning sign reading DANGER THIN ICE half buried in snow.",
+      "description": "Close-up of the ice: a long crack spreads across thin ice with water seeping through, next to a red 'DANGER THIN ICE' sign."
+    },
+    "s2_filler": {
+      "prompt": "Low close-up of the ice surface of a frozen lake: smooth thick white ice covered with fresh powder snow and old skate marks.",
+      "description": "Close-up of the ice: smooth thick white ice with fresh snow and skate marks."
+    },
+    "s3_skate": {
+      "prompt": "Medium shot of {man} skating gracefully in wide circles on a frozen lake, arms spread, laughing.",
+      "description": "Medium shot: the young man skates gracefully in circles, laughing."
+    },
+    "s4_center": {
+      "prompt": "Wide shot of {man} skating fast toward the center of a huge frozen lake, waving happily at the camera.",
+      "description": "Wide shot: the young man skates toward the center of the lake, waving happily."
+    },
+    "s5_blades": {
+      "prompt": "Extreme low close-up of ice skate blades gliding and scraping across the frozen lake surface, ice shavings spraying.",
+      "description": "Extreme close-up: skate blades glide across the ice surface."
+    },
+    "s6_break": {
+      "prompt": "Wide shot: the ice suddenly breaks beneath {man} on a frozen lake and he plunges into the freezing dark water with a big splash.",
+      "description": "The ice suddenly breaks and the young man plunges into the freezing water."
+    }
+  },
+  "versions": {
+    "surprise": ["s1_establish", "s2_filler", "s3_skate", "s4_center", "s5_blades", "s6_break"],
+    "suspense": ["s1_establish", "s2_reveal", "s3_skate", "s4_center", "s5_blades", "s6_break"]
+  },
+  "reveal_index": 1,
+  "final_index": 5,
+  "questions": [
+    {
+      "id": "ending",
+      "text": "Based only on what you have seen so far, how do you think this scene will end?",
+      "options": {
+        "calm": "He enjoys skating and goes home safely; nothing bad happens.",
+        "escape": "Something dangerous happens, but he gets away unharmed.",
+        "harm": "Something dangerous happens and he gets hurt."
+      },
+      "harm_option": "harm"
+    }
+  ],
+  "probe_facts": [
+    {
+      "id": "crack_visible",
+      "question": "Is there a visible crack in the ice or a thin-ice warning sign in this shot?",
+      "expected_shots": ["s2_reveal"]
+    },
+    {
+      "id": "fall_visible",
+      "question": "Is a person falling through the ice into the water in this shot?",
+      "expected_shots": ["s6_break"]
+    }
+  ]
+}
